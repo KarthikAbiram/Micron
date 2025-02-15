@@ -16,3 +16,5 @@
 *.lvlps
 .cache/
 Micron.lvlps
+
+Builds/
