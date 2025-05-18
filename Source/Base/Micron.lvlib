@@ -4,6 +4,8 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">419463168</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
-	<Item Name="Message.lvclass" Type="LVClass" URL="../Message/Message.lvclass"/>
-	<Item Name="Server.lvclass" Type="LVClass" URL="../Messenger/Server.lvclass"/>
+	<Property Name="NI.SortType" Type="Int">3</Property>
+	<Item Name="Service.lvclass" Type="LVClass" URL="../Server/Service/Service.lvclass"/>
+	<Item Name="Message.lvclass" Type="LVClass" URL="../Server/Message/Message.lvclass"/>
+	<Item Name="Client.lvclass" Type="LVClass" URL="../Client/Client.lvclass"/>
 </Library>

@@ -10,16 +10,8 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Client" Type="Folder">
-			<Item Name="Base" Type="Folder">
-				<Item Name="MicronClient.lvclass" Type="LVClass" URL="../Client/Base/MicronClient.lvclass"/>
-			</Item>
-		</Item>
-		<Item Name="Server" Type="Folder">
-			<Item Name="Base" Type="Folder">
-				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Item Name="Micron.lvlib" Type="Library" URL="../Server/Base/Micron.lvlib"/>
-			</Item>
+		<Item Name="Base" Type="Folder">
+			<Item Name="Micron.lvlib" Type="Library" URL="../Base/Micron.lvlib"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
