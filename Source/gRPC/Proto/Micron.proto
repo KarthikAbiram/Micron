@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "micron";
+option java_outer_classname = "Micron";
+option objc_class_prefix = "MC";
+
+package micron;
+
+service Micron {
+  rpc Message (MessageRequest) returns (MessageReply) {}
+}
+
+message MessageRequest {
+  string command = 1;
+  string payload = 2;
+}
+
+message MessageReply {
+  message Status {
+    int32 code = 1;
+    bool is_error = 2;
+    string desc = 3;
+  }
+
+  string payload = 1;
+  Status status = 2;
+}
