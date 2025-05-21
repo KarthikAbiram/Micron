@@ -1,13 +1,13 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "micron";
-option java_outer_classname = "Micron";
-option objc_class_prefix = "MC";
+option java_package = "MicronGRPC";
+option java_outer_classname = "MicronGRPC";
+option objc_class_prefix = "MG";
 
-package micron;
+package micronGrpc;
 
-service Micron {
+service MicronGRPC {
   rpc Message (MessageRequest) returns (MessageReply) {}
 }
 
