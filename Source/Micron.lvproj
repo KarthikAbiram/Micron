@@ -66,7 +66,6 @@
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
-				<Item Name="SLL QSM.lvlib" Type="Library" URL="/&lt;vilib&gt;/SLL Toolkit/SLL Queued State Machine/SLL QSM.lvlib"/>
 				<Item Name="SLL String.lvlib" Type="Library" URL="/&lt;vilib&gt;/SLL Toolkit/SLL String/SLL String.lvlib"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
