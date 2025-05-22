@@ -28,6 +28,9 @@
 				<Item Name="MicronGRPCServer.lvlib" Type="Library" URL="../gRPC/Server/Service/MicronGRPCServer.lvlib"/>
 			</Item>
 		</Item>
+		<Item Name="Helper" Type="Folder">
+			<Item Name="MicronHelper.lvlib" Type="Library" URL="../Helper/MicronHelper.lvlib"/>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
