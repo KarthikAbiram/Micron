@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-05-21 20:54:52" Modified_Date="2025-05-22 23:21:34" Creator="karthik.abiram" Comments="" ID="5cdd23e84d617fe3120853613c51d708">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-05-21 20:54:52" Modified_Date="2025-05-22 23:35:54" Creator="karthik.abiram" Comments="" ID="0a5ed5f60c2ddce64484278ae73753da">
   <Library_General_Settings>
     <Package_File_Name>Micron</Package_File_Name>
-    <Library_Version>0.0.0.2</Library_Version>
+    <Library_Version>0.2.0.2</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\Source</Library_Source_Folder>
     <Library_Output_Folder>..\Builds</Library_Output_Folder>
@@ -233,7 +233,7 @@
         <Path>..\Source\Client</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>09A608BF8EB1ACFD5F4CFFCB02953D7A</GUID>
+      <GUID>8CD00CC8F6163D5BDC9D7F8E474C18CD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -324,7 +324,7 @@
         <Path>..\Source\gRPC\Server\GRPCServerExample.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>74206583313D5EAF0F0FD951D603248E</GUID>
+      <GUID>654A50AE5E078B562DF22904A3F7E665</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -415,7 +415,7 @@
         <Path>..\Source\gRPC\Client\GRPCClientExample.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>33BCFD3D0D69834090813D590E92BE70</GUID>
+      <GUID>33EA127998EF67C15ED8BE95E7FBE547</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
