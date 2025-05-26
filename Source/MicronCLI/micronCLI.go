@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 func GetNetworkFolderPath(network string) (string, error) {
@@ -89,6 +90,69 @@ func Clear(network string) error {
 	return err
 }
 
+func micronCLI(Args []string) (string, error) {
+	// fmt.Println(Args)
+
+	help := `
+	Usage:
+		micronCLI <network> register <service_name> <connection_string> : Register a service along with its connection string
+		micronCLI <network> query <service_name> : Returns the connection string of the service, if present.
+		micronCLI <network> unregister <service_name> <connection_string> : Unregister/remove a service
+		micronCLI <network> clear : Clear/remove all services from network
+	`
+
+	response := ""
+	var err error = nil
+
+	if len(Args) < 3 {
+		fmt.Println(help)
+		return response, fmt.Errorf("Invalid number of args. %v", help)
+	}
+
+	network := strings.ToLower(Args[1])
+	cmd := strings.ToLower(Args[2])
+
+	switch cmd {
+	case "register":
+		{
+			if len(Args) < 5 {
+				return response, fmt.Errorf("Invalid number of args. %v", help)
+			}
+			service := strings.ToLower(Args[3])
+			connection_string := Args[4]
+			err = RegisterService(network, service, connection_string)
+			return "", err
+		}
+	case "query":
+		{
+			if len(Args) < 4 {
+				return response, fmt.Errorf("Invalid number of args. %v", help)
+			}
+			service := strings.ToLower(Args[3])
+			response, err = QueryService(network, service)
+			return response, err
+		}
+	case "unregister":
+		{
+			if len(Args) < 4 {
+				return response, fmt.Errorf("Invalid number of args. %v", help)
+			}
+			service := strings.ToLower(Args[3])
+			err = UnregisterService(network, service)
+			return "", err
+		}
+	case "clear":
+		{
+			err = Clear(network)
+			return "", err
+		}
+	default:
+		{
+			return "", fmt.Errorf("Command not supported: %v", cmd)
+		}
+	}
+}
+
 func example() {
 	err := RegisterService("ProdNet", "DatabaseService1", "Server=127.0.0.1;Database=mydb;User Id=admin;Password=secret;")
 	if err != nil {
@@ -113,5 +177,13 @@ func example() {
 }
 
 func main() {
-	example()
+	response, err := micronCLI(os.Args)
+	if err == nil {
+		if response != "" {
+			fmt.Println(response)
+		}
+	} else {
+		fmt.Println("Error:", err)
+	}
+	// example()
 }
