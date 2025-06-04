@@ -6,4 +6,7 @@ micronCLI <network> clear : Clear/remove all services from network
 
 
 Commands:
+Run below commands from the folder which contains micronCLI.go:
+
 go run micronCLI.go
+go build -o ..\..\Builds\MicronCLI\micronCLI.exe micronCLI.go

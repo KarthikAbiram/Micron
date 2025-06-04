@@ -25,8 +25,8 @@
 	<Item Name="MicronGRPCClient.ctl" Type="Class Private Data" URL="MicronGRPCClient.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="APIs" Type="Folder">
-		<Item Name="ConnectAsGRPC.vi" Type="VI" URL="../APIs/ConnectAsGRPC.vi">
+	<Item Name="Helper" Type="Folder">
+		<Item Name="ConnectAsGRPC.vi" Type="VI" URL="../Helper/ConnectAsGRPC.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$`!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$*!=!!?!!!7&amp;%VJ9X*P&lt;E.M;76O&gt;#ZM&gt;G.M98.T!!!147FD=G^O1WRJ:7ZU)'^V&gt;!!!&amp;E"1!!-!!!!"!!)):8*S&lt;X)A;7Y!!"J!-0````]21W^O&lt;G6D&gt;'FP&lt;C"4&gt;(*J&lt;G=!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!!*!!!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!AA!!!!!!1!)!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">3</Property>
@@ -35,10 +35,19 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1074278928</Property>
 		</Item>
+		<Item Name="StartAsGRPC.vi" Type="VI" URL="../Helper/StartAsGRPC.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'&amp;!!!!$A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$*!=!!?!!!7&amp;%VJ9X*P&lt;E.M;76O&gt;#ZM&gt;G.M98.T!!!147FD=G^O1WRJ:7ZU)'^V&gt;!!!&amp;E"1!!-!!!!"!!)):8*S&lt;X)A;7Y!!"2!-P````],47FD=G^O)&amp;"B&gt;'A!%%!Q`````Q&gt;/:82X&lt;X*L!!Z!-0````]%4G&amp;N:1!!#U!$!!21&lt;X*U!!!/1$$`````"%&amp;S:X-!!&amp;5!]1!!!!!!!!!#&amp;%VJ9X*P&lt;E.M;76O&gt;#ZM&gt;G.M98.T%V.F=H:J9W5A2'6U97FM=SZD&gt;'Q!*%"1!!5!"Q!)!!E!#A!,$V.F=H:J9W5A2'6U97FM=Q"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!$!-!!(A!!!U)!!!!!!!!!!!!!!E!!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!#A!!!!!"!!U!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
+		</Item>
 	</Item>
 	<Item Name="Methods" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Item Name="Connect.vi" Type="VI" URL="../Methods/Connect.vi">
+		<Item Name="ConnectCore.vi" Type="VI" URL="../Methods/ConnectCore.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%^!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!$E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"J!-0````]21W^O&lt;G6D&gt;'FP&lt;C"4&gt;(*J&lt;G=!-E"Q!"Y!!"I947FD=G^O2V*11U.M;76O&gt;#ZM&gt;G.M98.T!!!.2V*11U.M;76O&gt;#"J&lt;A"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!=!#!-!!(A!!!U)!!!!!!!!!!!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!)!!!!EA!!!!!"!!E!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
@@ -47,7 +56,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
 		</Item>
-		<Item Name="Message.vi" Type="VI" URL="../Methods/Message.vi">
+		<Item Name="MessageCore.vi" Type="VI" URL="../Methods/MessageCore.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;6!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"*!-0````])5G6T='^O=W5!!$2!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!$E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!""!-0````](5'&amp;Z&lt;'^B:!!11$$`````"U.P&lt;7VB&lt;G1!-E"Q!"Y!!"I947FD=G^O2V*11U.M;76O&gt;#ZM&gt;G.M98.T!!!.2V*11U.M;76O&gt;#"J&lt;A"5!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!)!!E!#A-!!(A!!!E!!!!!!!!!#1!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!AA!!!))!!!!E!!!!!!"!!M!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
@@ -56,7 +65,7 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 		</Item>
-		<Item Name="Disconnect.vi" Type="VI" URL="../Methods/Disconnect.vi">
+		<Item Name="DisconnectCore.vi" Type="VI" URL="../Methods/DisconnectCore.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%D!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!$E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$*!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!$5&gt;35%.$&lt;'FF&lt;H1A;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!*!!!!!!!1!)!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
