@@ -85,37 +85,37 @@
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Property Name="NI.SortType" Type="Int">3</Property>
-			<Item Name="Micron Template Service" Type="EXE">
+			<Item Name="[%Micron_Template%] Service" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{551B822F-AA11-485C-8C7B-FE320E17EEAC}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{C71E9CB0-16FE-45BA-9742-0E52C719CD4A}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{7EFCEFC8-64CC-4DEB-BA70-9E58272DEA78}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Micron Template Service</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">[%Micron_Template%] Service</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/Service</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/Service</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{45B15CB2-9EBD-4C96-8DDB-06E58524636E}</Property>
 				<Property Name="Bld_version.build" Type="Int">2</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">MicronTemplateService.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/Service/MicronTemplateService.exe</Property>
+				<Property Name="Destination[0].destName" Type="Str">[%Micron_Template%]Service.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/Service/[%Micron_Template%]Service.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/Service/data</Property>
+				<Property Name="Destination[1].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/Service/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[2].destName" Type="Str">Libraries</Property>
-				<Property Name="Destination[2].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/Service/Libraries</Property>
+				<Property Name="Destination[2].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/Service/Libraries</Property>
 				<Property Name="Destination[2].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{F67BE84B-26FC-4F6B-811B-31E9F23CA02A}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{DD34CFF5-73F5-4205-BA44-9D34E7DF0A94}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Service/MicronTemplateService.lvlib/Main.vi</Property>
@@ -130,40 +130,40 @@
 				<Property Name="Source[2].type" Type="Str">Container</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">Soliton Technologies</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Micron Template Service</Property>
-				<Property Name="TgtF_internalName" Type="Str">Micron Template Service</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">[%Micron_Template%] Service</Property>
+				<Property Name="TgtF_internalName" Type="Str">[%Micron_Template%] Service</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 Soliton Technologies</Property>
-				<Property Name="TgtF_productName" Type="Str">Micron Template Service</Property>
+				<Property Name="TgtF_productName" Type="Str">[%Micron_Template%] Service</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{7E44E1BA-DCC3-4CB2-8A41-F1CD3D734D7C}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">MicronTemplateService.exe</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">[%Micron_Template%]Service.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Micron Template APIs" Type="Packed Library">
+			<Item Name="[%Micron_Template%] APIs" Type="Packed Library">
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{B2A9A1EE-8E53-49C4-AF75-FD9FFFD5297B}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Micron Template APIs</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">[%Micron_Template%] APIs</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/APIs</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/APIs</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{857CD97C-7FCD-4C30-910D-3DB69CA809B6}</Property>
 				<Property Name="Bld_version.build" Type="Int">2</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">MicronTemplateAPIs.lvlibp</Property>
-				<Property Name="Destination[0].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/APIs/MicronTemplateAPIs.lvlibp</Property>
+				<Property Name="Destination[0].destName" Type="Str">[%Micron_Template%]APIs.lvlibp</Property>
+				<Property Name="Destination[0].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/APIs/[%Micron_Template%]APIs.lvlibp</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/APIs</Property>
+				<Property Name="Destination[1].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/APIs</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[2].destName" Type="Str">Libraries</Property>
-				<Property Name="Destination[2].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/Template/APIs/Libraries</Property>
+				<Property Name="Destination[2].path" Type="Path">/D/GitHub/KarthikAbiram/Micron/Builds/[%Micron_Template%]/APIs/Libraries</Property>
 				<Property Name="Destination[2].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{30A0852D-B7DB-488A-864A-B5E39F6D830B}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{DD34CFF5-73F5-4205-BA44-9D34E7DF0A94}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/APIs/MicronTemplateAPIs.lvlib</Property>
@@ -182,12 +182,12 @@
 				<Property Name="Source[2].type" Type="Str">Container</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">Soliton Technologies</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Micron Template APIs</Property>
-				<Property Name="TgtF_internalName" Type="Str">Micron Template APIs</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">[%Micron_Template%] APIs</Property>
+				<Property Name="TgtF_internalName" Type="Str">[%Micron_Template%] APIs</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 Soliton Technologies</Property>
-				<Property Name="TgtF_productName" Type="Str">Micron Template APIs</Property>
+				<Property Name="TgtF_productName" Type="Str">[%Micron_Template%] APIs</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{7DF53EE0-E175-4928-B8A9-F4C2A6F906B2}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">MicronTemplateAPIs.lvlibp</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">[%Micron_Template%]APIs.lvlibp</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 		</Item>
