@@ -5,6 +5,7 @@
 #define MyAppVersion "0.1"
 #define MyAppPublisher "Karthik Abiram"
 #define MyAppURL "https://github.com/KarthikAbiram/Micron"
+#include "environment.iss"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -30,6 +31,7 @@ SolidCompression=yes
 WizardStyle=modern
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
+ChangesEnvironment=true
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -38,3 +40,15 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Source: "..\Builds\MicronCLI\micronCLI.exe"; DestDir: "{app}\bin"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
+[Code]
+procedure CurStepChanged(CurStep: TSetupStep);
+begin
+    if CurStep = ssPostInstall 
+     then EnvAddPath(ExpandConstant('{app}') +'\bin');
+end;
+
+procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+begin
+    if CurUninstallStep = usPostUninstall
+    then EnvRemovePath(ExpandConstant('{app}') +'\bin');
+end;
