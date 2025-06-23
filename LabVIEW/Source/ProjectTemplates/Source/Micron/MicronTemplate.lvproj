@@ -77,6 +77,7 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="MicronCLI.lvclass" Type="LVClass" URL="../../../../vi.lib/Micron/MicronCLI/MicronCLI.lvclass"/>
 			<Item Name="MicronClient.lvclass" Type="LVClass" URL="../../../../vi.lib/Micron/Base/Client/MicronClient.lvclass"/>
 			<Item Name="MicronGRPCClient.lvclass" Type="LVClass" URL="../../../../vi.lib/Micron/gRPC/Client/MicronGRPCClient.lvclass"/>
 			<Item Name="MicronGRPCGeneratedClient.lvlib" Type="Library" URL="../../../../vi.lib/Micron/gRPC/Client/Generated/MicronGRPCGeneratedClient/MicronGRPCGeneratedClient.lvlib"/>
