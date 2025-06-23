@@ -13,8 +13,8 @@ import (
 )
 
 var (
-	unregNetwork string
-	unregService string
+	unregNetwork   string
+	unregServiceID string
 )
 
 var unregisterCmd = &cobra.Command{
@@ -25,7 +25,7 @@ var unregisterCmd = &cobra.Command{
 You can provide input either as flags or positional arguments:
 
 Flag style:
-  micronCLI unregister --network mynetwork --service myservice
+  micronCLI unregister --network mynetwork --serviceID myservice
 
 Positional style:
   micronCLI unregister mynetwork myservice
@@ -34,31 +34,31 @@ Positional style:
 	Run: func(cmd *cobra.Command, args []string) {
 		// Read flags first
 		network := strings.ToLower(unregNetwork)
-		serviceName := strings.ToLower(unregService)
+		serviceID := strings.ToLower(unregServiceID)
 
 		// Fallback to positional args
 		if network == "" && len(args) > 0 {
 			network = strings.ToLower(args[0])
 		}
-		if serviceName == "" && len(args) > 1 {
-			serviceName = strings.ToLower(args[1])
+		if serviceID == "" && len(args) > 1 {
+			serviceID = strings.ToLower(args[1])
 		}
 
 		// Validate inputs
-		if network == "" || serviceName == "" {
+		if network == "" || serviceID == "" {
 			fmt.Println("Error: both network and service are required.")
 			fmt.Println(cmd.UsageString())
 			os.Exit(1)
 		}
 
 		// Call the unregister logic
-		err := library.UnregisterService(network, serviceName)
+		err := library.UnregisterService(network, serviceID)
 		if err != nil {
 			fmt.Println("Error:", err)
 			os.Exit(1)
 		}
 
-		fmt.Printf("Successfully unregistered '%s' from network '%s'\n", serviceName, network)
+		fmt.Printf("Successfully unregistered '%s' from network '%s'\n", serviceID, network)
 	},
 }
 
@@ -66,5 +66,5 @@ func init() {
 	rootCmd.AddCommand(unregisterCmd)
 
 	unregisterCmd.Flags().StringVar(&unregNetwork, "network", "", "Network name")
-	unregisterCmd.Flags().StringVar(&unregService, "service", "", "Service name")
+	unregisterCmd.Flags().StringVar(&unregServiceID, "serviceID", "", "Service name")
 }

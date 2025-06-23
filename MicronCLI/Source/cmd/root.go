@@ -19,15 +19,15 @@ var rootCmd = &cobra.Command{
 Usage examples:
 
   Register a service:
-    micronCLI register --network mynetwork --service myservice --connection localhost:50051
+    micronCLI register --network mynetwork --serviceID myservice --connection localhost:50051
     micronCLI register mynetwork myservice localhost:50051
 
   Query a service:
-    micronCLI query --network mynetwork --service myservice
+    micronCLI query --network mynetwork --serviceID myservice
     micronCLI query mynetwork myservice
 
   Unregister a service:
-    micronCLI unregister --network mynetwork --service myservice
+    micronCLI unregister --network mynetwork --serviceID myservice
     micronCLI unregister mynetwork myservice
 
   Clear a network:

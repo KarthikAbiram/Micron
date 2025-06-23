@@ -13,8 +13,8 @@ import (
 )
 
 var (
-	queryNetwork string
-	queryService string
+	queryNetwork   string
+	queryServiceID string
 )
 
 var queryCmd = &cobra.Command{
@@ -25,7 +25,7 @@ var queryCmd = &cobra.Command{
 You can use either flags or positional arguments:
 
 Flags style:
-  micronCLI query --network mynetwork --service myservice
+  micronCLI query --network mynetwork --serviceID myservice
 
 Positional style:
   micronCLI query mynetwork myservice
@@ -34,29 +34,32 @@ Positional style:
 	Run: func(cmd *cobra.Command, args []string) {
 		// Use flags if set
 		network := strings.ToLower(queryNetwork)
-		serviceName := strings.ToLower(queryService)
+		serviceID := strings.ToLower(queryServiceID)
 
 		// Fallback to positional args if needed
 		if network == "" && len(args) > 0 {
 			network = strings.ToLower(args[0])
 		}
-		if serviceName == "" && len(args) > 1 {
-			serviceName = strings.ToLower(args[1])
+		if serviceID == "" && len(args) > 1 {
+			serviceID = strings.ToLower(args[1])
 		}
 
 		// Validate
-		if network == "" || serviceName == "" {
+		if network == "" || serviceID == "" {
 			fmt.Println("Error: both network and service are required.")
 			fmt.Println(cmd.UsageString())
 			os.Exit(1)
 		}
 
-		// Perform query (replace with real logic)
-		connStr, err := library.QueryService(network, serviceName)
-		if err != nil {
-			fmt.Println("Error:", err)
-			os.Exit(1)
-		}
+		// Perform query
+		connStr, _ := library.QueryService(network, serviceID)
+		//Ignore error, which would occur if service has not been registered
+
+		// connStr, err := library.QueryService(network, serviceID)
+		// if err != nil {
+		// 	fmt.Println("Error:", err)
+		// 	os.Exit(1)
+		// }
 		fmt.Println(connStr)
 	},
 }
@@ -65,5 +68,5 @@ func init() {
 	rootCmd.AddCommand(queryCmd)
 
 	queryCmd.Flags().StringVar(&queryNetwork, "network", "", "Network name")
-	queryCmd.Flags().StringVar(&queryService, "service", "", "Service name")
+	queryCmd.Flags().StringVar(&queryServiceID, "serviceID", "", "Service name")
 }
