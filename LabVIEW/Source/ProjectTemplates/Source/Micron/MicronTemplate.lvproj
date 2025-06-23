@@ -45,14 +45,12 @@
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
-				<Item Name="Get Command Line Arguments.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/Get Command Line Arguments.vi"/>
 				<Item Name="Get File Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Get File Extension.vi"/>
 				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
 				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
 				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
 				<Item Name="grpc-lvsupport-release.lvlib" Type="Library" URL="/&lt;vilib&gt;/gRPC/LabVIEW gRPC Library/grpc-lvsupport-release.lvlib"/>
-				<Item Name="gRPC-servicer-release.lvlib" Type="Library" URL="/&lt;vilib&gt;/gRPC/LabVIEW gRPC Servicer/gRPC-servicer-release.lvlib"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
@@ -60,7 +58,6 @@
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
-				<Item Name="Option Parser.lvlib" Type="Library" URL="/&lt;vilib&gt;/Wiresmith Technology/G CLI/Argument Parser/Option Parser.lvlib"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
@@ -77,12 +74,13 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="MicronClient.lvclass" Type="LVClass" URL="../../../../ToolkitVIs/Micron/Base/Client/MicronClient.lvclass"/>
-			<Item Name="MicronGRPCClient.lvclass" Type="LVClass" URL="../../../../ToolkitVIs/Micron/gRPC/Client/MicronGRPCClient.lvclass"/>
-			<Item Name="MicronGRPCGeneratedClient.lvlib" Type="Library" URL="../../../../ToolkitVIs/Micron/gRPC/Client/Generated/MicronGRPCGeneratedClient/MicronGRPCGeneratedClient.lvlib"/>
-			<Item Name="MicronGRPCGeneratedServer.lvlib" Type="Library" URL="../../../../ToolkitVIs/Micron/gRPC/Server/Service/Generated/MicronGRPCGeneratedServer/MicronGRPCGeneratedServer.lvlib"/>
-			<Item Name="MicronGRPCServer.lvlib" Type="Library" URL="../../../../ToolkitVIs/Micron/gRPC/Server/Service/MicronGRPCServer.lvlib"/>
-			<Item Name="MicronServer.lvlib" Type="Library" URL="../../../../ToolkitVIs/Micron/Base/Server/MicronServer.lvlib"/>
+			<Item Name="GetMicronArgs.vi" Type="VI" URL="../../../../ToolkitVIs/Micron/Base/Server/Service/Helper/GetMicronArgs.vi"/>
+			<Item Name="InitializeAsGRPC.vi" Type="VI" URL="../../../../ToolkitVIs/Micron/gRPC/Server/Service/Helper/InitializeAsGRPC.vi"/>
+			<Item Name="MessageBase.lvclass" Type="LVClass" URL="../../../../ToolkitVIs/Micron/Base/Server/Message/MessageBase.lvclass"/>
+			<Item Name="MicronClient.lvclass" Type="LVClass" URL="../../../../vi.lib/Micron/Base/Client/MicronClient.lvclass"/>
+			<Item Name="MicronGRPCClient.lvclass" Type="LVClass" URL="../../../../vi.lib/Micron/gRPC/Client/MicronGRPCClient.lvclass"/>
+			<Item Name="MicronGRPCGeneratedClient.lvlib" Type="Library" URL="../../../../vi.lib/Micron/gRPC/Client/Generated/MicronGRPCGeneratedClient/MicronGRPCGeneratedClient.lvlib"/>
+			<Item Name="ServiceBase.lvclass" Type="LVClass" URL="../../../../ToolkitVIs/Micron/Base/Server/Service/ServiceBase.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Property Name="NI.SortType" Type="Int">3</Property>

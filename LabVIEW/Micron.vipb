@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2025-06-22 16:19:02" Creator="karthik.abiram" Comments="" ID="f589d156d3d4423ece78869a6713d24b">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2025-06-22 16:57:55" Creator="karthik.abiram" Comments="" ID="c441130b8fb4c889dab6da90c4988aa7">
   <Library_General_Settings>
     <Package_File_Name>Micron</Package_File_Name>
-    <Library_Version>0.2.2.9</Library_Version>
+    <Library_Version>0.2.2.13</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>Source</Library_Source_Folder>
     <Library_Output_Folder>..\Builds\LabVIEW</Library_Output_Folder>
@@ -99,30 +99,18 @@
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
         <Path/>
       </QuickDrop_Plugins>
+      <Additional_Destination>
+        <Name>LabVIEW</Name>
+        <LLB>false</LLB>
+        <Preserve_Hierarchy>true</Preserve_Hierarchy>
+        <Path>&lt;application&gt;</Path>
+      </Additional_Destination>
     </Destinations>
     <Source_Files>
       <Destination_Overrides>
         <Path>.</Path>
         <Destination>0</Destination>
-        <Additional_Destination>false</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>ProjectTemplates</Path>
-        <Destination>9</Destination>
-        <Additional_Destination>false</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>ToolkitVIs</Path>
-        <Destination>0</Destination>
-        <Additional_Destination>false</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>ToolsMenu</Path>
-        <Destination>7</Destination>
-        <Additional_Destination>false</Additional_Destination>
+        <Additional_Destination>true</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
       <Password_Overrides>
@@ -135,9 +123,6 @@
         <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
-      <Exclusions>
-        <Path>Micron.lvproj</Path>
-      </Exclusions>
       <Place_Folder_Contents>
         <Path/>
       </Place_Folder_Contents>
@@ -146,9 +131,6 @@
       </Place_Folder_Contents>
       <Place_Folder_Contents>
         <Path>ToolsMenu</Path>
-      </Place_Folder_Contents>
-      <Place_Folder_Contents>
-        <Path>ProjectTemplates</Path>
       </Place_Folder_Contents>
     </Source_Files>
     <License_Agreement_Filepath/>
@@ -278,7 +260,7 @@
         <Path>Source\ToolsMenu</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>63C164E8F0596FC5CB29B0251CA0925F</GUID>
+      <GUID>431AFE081D053056A03234605951BD8C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -313,7 +295,7 @@
         <Path>Source\ProjectTemplates\Source</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6927A2C2EE6A1BC529B9336E1A98F3A0</GUID>
+      <GUID>6183DACB9CC5128A2FA728CD32D4CCD2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -348,7 +330,7 @@
         <Path>Source\ToolkitVIs\Micron</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>46CE405A9C2B9D62EC6D3837CD5A5F0D</GUID>
+      <GUID>4EEC71416687BADB0965610DE857F54E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -383,7 +365,7 @@
         <Path>Source\ToolsMenu\Micron</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>937EBC8E9CAEBB768EA8D1E4D024C5E0</GUID>
+      <GUID>A615E60A4190C9250BA45E8E07B6CF2B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>1</Parent_Palette_Index>
@@ -418,7 +400,7 @@
         <Path>Source\ProjectTemplates\Source\Micron</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F728CF4DBD131F4A61EAEC6B1CA27217</GUID>
+      <GUID>3A20B60C07290074C7F27610375878A9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>4</Parent_Palette_Index>
@@ -481,7 +463,7 @@
         <Path>Source\ProjectTemplates\Source\Micron\MicronTemplateLocationPlaceholder.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C2F8A35CF8F19B92D734FFAC22951A96</GUID>
+      <GUID>B7A95B7D7C09FC562BD587925439B5E0</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>5</Parent_Palette_Index>
@@ -530,7 +512,7 @@
         <Path>Source\ProjectTemplates\Source\Micron\APIs\Example.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>30E5B7C5512DB95D7F58279A6384AC01</GUID>
+      <GUID>044842CB9EE6AFD9020CF599EBE1D5B1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>5</Parent_Palette_Index>
@@ -565,7 +547,7 @@
         <Path>Source\ProjectTemplates\Source\Micron\Service\Main.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>28E007742F06022A8115CA7420642A34</GUID>
+      <GUID>6C7CED0DB2E01DF4078FEAC27696F2F2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -656,7 +638,7 @@
         <Path>Source\ProjectTemplates\Source\Micron\APIs\Methods\Start.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1A6E2EB99FB1FCC6CB4558E80369C78E</GUID>
+      <GUID>044A9EBB234AE7925906CE692A427F5C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>2</Parent_Palette_Index>
@@ -719,7 +701,7 @@
         <Path>Source\ToolkitVIs\Micron\Tools</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>30894605B72B23329131CC1F408E0371</GUID>
+      <GUID>84141072F479219D153D0348E65017E2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>9</Parent_Palette_Index>
@@ -768,7 +750,7 @@
         <Path>Source\ToolkitVIs\Micron\Base\Server</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E8E002CEF2A6503FF6BC3B36459EFC86</GUID>
+      <GUID>EA3CFDA821BE1494510B17102D0F2B62</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>9</Parent_Palette_Index>
@@ -817,7 +799,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Server</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EBF25F152AEA583679007C7038506C6F</GUID>
+      <GUID>037912A2357D29CEEEEBBA39A01B956D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>9</Parent_Palette_Index>
@@ -849,10 +831,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Tools\CreateMicron.vi</Path>
+        <Path>Source\vi.lib\Micron\Tools\CreateMicron.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9034DAE896C302C12489D63FFACF95BB</GUID>
+      <GUID>56FA3187BA9DB5C2964E385F2FB38D89</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>10</Parent_Palette_Index>
@@ -887,7 +869,7 @@
         <Path>Source\ToolkitVIs\Micron\Base\Client\Methods</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>79F0437787DCBD2AA71022AA8D0AC9BD</GUID>
+      <GUID>7347F62BF49ABF189531D185D35F52CB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>10</Parent_Palette_Index>
@@ -936,7 +918,7 @@
         <Path>Source\ToolkitVIs\Micron\Base\Server\Service</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A3D918CABCA23F1EFAFB9F7010E6A7AB</GUID>
+      <GUID>65067B3FE641908FDA1AC5EBEEE6B7EF</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>13</Parent_Palette_Index>
@@ -982,7 +964,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Client\Methods\ConnectCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Client\Methods\ConnectCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -996,7 +978,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Client\Methods\DisconnectCore.vi</Path>
+        <Path>Source\ProjectTemplates\Source\Micron\APIs\Methods\DisconnectCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1010,7 +992,7 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Client\Methods\MessageCore.vi</Path>
+        <Path>Source\ProjectTemplates\Source\Micron\APIs\Methods\MessageCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1024,7 +1006,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Client\Methods\PingCore.vi</Path>
+        <Path>Source\ProjectTemplates\Source\Micron\APIs\Methods\PingCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1038,7 +1020,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Client\Methods\StartandConnectCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Client\Methods\StartandConnectCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1052,10 +1034,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Client\Methods\StartCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Client\Methods\StartCore.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4C1CF40E024A0E2ADEBF0BDAD703657C</GUID>
+      <GUID>77B264BAA09CAEE9E7A5E1F36748C5DD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>15</Parent_Palette_Index>
@@ -1087,10 +1069,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Client\Methods\APIs\StartLegacy.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Client\Methods\APIs\StartLegacy.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DAAF235FCE307B9FDCB31E3587C6827E</GUID>
+      <GUID>6856A4E1D44EF1BCE54D1988D02A2AA7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>14</Parent_Palette_Index>
@@ -1125,7 +1107,7 @@
         <Path>Source\ToolkitVIs\Micron\Base\Server\Message\Methods</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>36579CC6AB456819785932A28FF91507</GUID>
+      <GUID>037ED3472D9575B1B6E415D6B19C8C0F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>14</Parent_Palette_Index>
@@ -1174,7 +1156,7 @@
         <Path>Source\ToolkitVIs\Micron\Base\Server\Service\Methods</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>82461AA1C4C8EB7695CED53B6680C106</GUID>
+      <GUID>515642746043954754D7C6A43A2B2AD5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>17</Parent_Palette_Index>
@@ -1206,7 +1188,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Server\Message\Methods\Get.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Message\Methods\Get.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1220,7 +1202,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Server\Message\Methods\isCancelled.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Message\Methods\isCancelled.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1234,10 +1216,10 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Server\Message\Methods\Reply.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Message\Methods\Reply.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5BAE55FA6B4AE60FB9B14114986D7993</GUID>
+      <GUID>175E86B4F1C8B726A1A47A73D0F84233</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>18</Parent_Palette_Index>
@@ -1269,10 +1251,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Server\Service\Helper\GetMicronArgs.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Service\Helper\GetMicronArgs.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D600C266735C60C4DEB369D5F762D836</GUID>
+      <GUID>444048E54B7C562FD74E2FC10421432B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>18</Parent_Palette_Index>
@@ -1304,7 +1286,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Server\Service\Methods\CloseCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\CloseCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1318,10 +1300,10 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\Base\Server\Service\Methods\InitializeCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\InitializeCore.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>8725EC4435A3FAD9EC4C6231634C109D</GUID>
+      <GUID>6F38471E79BF5C5F8856FE3F0F9AF3FC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>11</Parent_Palette_Index>
@@ -1395,10 +1377,10 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\GRPCClientExample.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\GRPCClientExample.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E59A075144F6D5EDCCF2CAE5423C2005</GUID>
+      <GUID>B2F52873EC0EDF5C30C763960E48300A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>11</Parent_Palette_Index>
@@ -1458,10 +1440,10 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\GRPCServerExample.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\GRPCServerExample.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BC1DBC484F7B8C25B0473D4181D20A30</GUID>
+      <GUID>35D1870D5EA4805B968106661E270306</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>22</Parent_Palette_Index>
@@ -1496,7 +1478,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>09E8DBA10FD21CE2A5E49BC351779746</GUID>
+      <GUID>AA660BB53E30ED49DC072603DC467CF8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>22</Parent_Palette_Index>
@@ -1528,7 +1510,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Helper\ConnectAsGRPC.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Helper\ConnectAsGRPC.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1542,10 +1524,10 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Helper\StartAsGRPC.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Helper\StartAsGRPC.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>12BB6CC111B997A43BCDBB8E644CCAF5</GUID>
+      <GUID>031D21BDC7EE00F86DF5166F1532C8F9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>22</Parent_Palette_Index>
@@ -1577,7 +1559,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Methods\ConnectCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Client\Methods\ConnectCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1591,7 +1573,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Methods\DisconnectCore.vi</Path>
+        <Path>Source\ProjectTemplates\Source\Micron\APIs\Methods\DisconnectCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1605,10 +1587,10 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Methods\MessageCore.vi</Path>
+        <Path>Source\ProjectTemplates\Source\Micron\APIs\Methods\MessageCore.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FBAB21C2F17A6D86E999459CF76C804A</GUID>
+      <GUID>6E433B72160EF6DAE206D5BFB0F33F8B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>24</Parent_Palette_Index>
@@ -1671,7 +1653,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Service</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9FF63B4550402F86947A44C8F0271297</GUID>
+      <GUID>099D65D7FE32324E355E7BB1C6277E25</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>27</Parent_Palette_Index>
@@ -1703,7 +1685,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\Client API\Create Client.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\Client API\Create Client.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1717,10 +1699,10 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\Client API\Destroy Client.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\Client API\Destroy Client.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>66320AF283E1002981317AD0F2C496C5</GUID>
+      <GUID>64756F4A241FCB4959ED0E391E22723A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>27</Parent_Palette_Index>
@@ -1752,7 +1734,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageReply.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageReply.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1766,7 +1748,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageReply_Status.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageReply_Status.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1780,7 +1762,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageRequest.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageRequest.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1794,7 +1776,7 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\Register gRPC Messages.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\Register gRPC Messages.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1808,7 +1790,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageReply.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageReply.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1822,7 +1804,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageReply_Status.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageReply_Status.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1836,10 +1818,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageRequest.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageRequest.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2FDF1F172CE863ACCF46FBD1FA23D860</GUID>
+      <GUID>CB752576D649EB96858C7F8AD9A55866</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>27</Parent_Palette_Index>
@@ -1874,7 +1856,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Service\MicronGRPC</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1A6CF2141BB5C024CB11E99704F982F2</GUID>
+      <GUID>8E1369C77492D37A90FF8D30AD1092F3</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>30</Parent_Palette_Index>
@@ -1906,10 +1888,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Service\MicronGRPC\MicronGRPC Message.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Service\MicronGRPC\MicronGRPC Message.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>742DF9C5A19B3A201A53D7CF6C5BF195</GUID>
+      <GUID>AD99DEFBD795C27101BC6C7330DCC3D2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>23</Parent_Palette_Index>
@@ -1944,7 +1926,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Server\Message\Methods</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9FE92EC63ECD06C945506B283295B5B3</GUID>
+      <GUID>932DCDF71250E7FAD2DDCBC69BCF8E11</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>23</Parent_Palette_Index>
@@ -2007,7 +1989,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Methods</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>995FFCAC94E3A7E38108FDB95C8687D0</GUID>
+      <GUID>DEA5721F18A570151ABF019F32E3B59C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>32</Parent_Palette_Index>
@@ -2039,7 +2021,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Message\Methods\Construct.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Message\Methods\Construct.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2053,7 +2035,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Message\Methods\Get.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Message\Methods\Get.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2067,7 +2049,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Message\Methods\isCancelled.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Message\Methods\isCancelled.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2081,10 +2063,10 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Message\Methods\Reply.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Message\Methods\Reply.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>92495067A67DB3ACF81013598EFAB978</GUID>
+      <GUID>DB3B31379494E96BC6C129A1253DFFB3</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>33</Parent_Palette_Index>
@@ -2119,7 +2101,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>77B218888C0F9629E278FD848E1A8808</GUID>
+      <GUID>E24E9BD4C473F28710F88C36270BE7E7</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>33</Parent_Palette_Index>
@@ -2151,10 +2133,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Helper\InitializeAsGRPC.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Helper\InitializeAsGRPC.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>955F24AEEF247DACE346C8EF47F2EB62</GUID>
+      <GUID>73DDBE4A5C5FB3E44DAC50BE10919E93</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>33</Parent_Palette_Index>
@@ -2186,7 +2168,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Methods\CloseCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\CloseCore.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2200,10 +2182,10 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Methods\InitializeCore.vi</Path>
+        <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\InitializeCore.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EAB94EDA8C92863D5462654C72B72BC1</GUID>
+      <GUID>9587EC27FADCD9EE0A148C7DE0510693</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>35</Parent_Palette_Index>
@@ -2291,7 +2273,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Cleanup Panel.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Cleanup Panel.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2305,7 +2287,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Get Service Class Instances.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Get Service Class Instances.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2319,7 +2301,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Initialize Panel.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Initialize Panel.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2333,7 +2315,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Monitor for Stop.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Monitor for Stop.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2347,10 +2329,10 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Run Service.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Run Service.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E1578F79E997269B071F5CEB81A19A85</GUID>
+      <GUID>947BAEC715F25A9A6E006E6F83C13631</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>38</Parent_Palette_Index>
@@ -2396,7 +2378,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\CustomExample.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\CustomExample.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2410,7 +2392,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\CustomStartService.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\CustomStartService.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2424,10 +2406,10 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\CustomStopService.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\CustomStopService.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D496EDE2729F29F307A2883C5268E5C3</GUID>
+      <GUID>DC33284F8169F0BAD07737A6A320E487</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>38</Parent_Palette_Index>
@@ -2459,10 +2441,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Generated Descriptors\Generated Descriptors.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Generated Descriptors\Generated Descriptors.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AE55D7C6D5522D8E23A07AB8BBECADF4</GUID>
+      <GUID>478AA75D2EAE5F6B82D46083F024F4B0</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>38</Parent_Palette_Index>
@@ -2494,7 +2476,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\FlatToRichmicronGrpc_MessageReply.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageReply.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2508,7 +2490,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\FlatToRichmicronGrpc_MessageReply_Status.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageReply_Status.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2522,7 +2504,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\FlatToRichmicronGrpc_MessageRequest.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\FlatToRichmicronGrpc_MessageRequest.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2536,7 +2518,7 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Get micronGrpc_MessageReply.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Get micronGrpc_MessageReply.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2550,7 +2532,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Get micronGrpc_MessageReply_Status.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Get micronGrpc_MessageReply_Status.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2564,7 +2546,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Get micronGrpc_MessageRequest.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Get micronGrpc_MessageRequest.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2578,7 +2560,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Register Descriptors.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Register Descriptors.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2592,7 +2574,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Register gRPC Messages.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\Register gRPC Messages.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2606,7 +2588,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\RichToFlatmicronGrpc_MessageReply.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageReply.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2620,7 +2602,7 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\RichToFlatmicronGrpc_MessageReply_Status.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageReply_Status.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2634,7 +2616,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\RichToFlatmicronGrpc_MessageRequest.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Client\Generated\MicronGRPCGeneratedClient\RPC Messages\RichToFlatmicronGrpc_MessageRequest.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2648,7 +2630,7 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Set micronGrpc_MessageReply.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Set micronGrpc_MessageReply.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2662,7 +2644,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Set micronGrpc_MessageReply_Status.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Set micronGrpc_MessageReply_Status.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2676,10 +2658,10 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Set micronGrpc_MessageRequest.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Messages\Set micronGrpc_MessageRequest.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A347E1C85A37D9AD7740A9A288AED74B</GUID>
+      <GUID>DE3F70FD95A6C1DD19F311379F6B684B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>38</Parent_Palette_Index>
@@ -2714,7 +2696,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7BFE54024E8D0AA3E05C408261CE334D</GUID>
+      <GUID>F43B14542CEFC55C5FF62C0AAB305EA9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>39</Parent_Palette_Index>
@@ -2746,7 +2728,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\SubVIs\CustomConstructService.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\SubVIs\CustomConstructService.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2760,10 +2742,10 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\SubVIs\CustomEventHandler.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\Custom\SubVIs\CustomEventHandler.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>61260056CF07326E8DB63A7007B72B16</GUID>
+      <GUID>413F106C19853916D6AFD84E5FA96E5F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>42</Parent_Palette_Index>
@@ -2840,7 +2822,7 @@
         <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B390E39AFE5B8F8529E21866E089F820</GUID>
+      <GUID>095FDF99DFED36F75E208E758890DB99</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>44</Parent_Palette_Index>
@@ -2872,7 +2854,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Read MicronUE.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Read MicronUE.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2886,7 +2868,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Read Server Internal UEs.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Read Server Internal UEs.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2900,7 +2882,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Read Server RPC Methods.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Read Server RPC Methods.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2914,7 +2896,7 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Write MicronUE.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Write MicronUE.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2928,7 +2910,7 @@
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Write Server Internal UEs.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Write Server Internal UEs.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -2942,10 +2924,10 @@
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Write Server RPC Methods.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Accessor\Write Server RPC Methods.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B4A401934C0D90F3330D8DAE5C26B9EA</GUID>
+      <GUID>ED4106FBB51496DFAED42C715601F37F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>44</Parent_Palette_Index>
@@ -2977,10 +2959,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Custom\Expose.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Custom\Expose.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A25BEE8C45C0CCC4E7D29B9C3073F8F3</GUID>
+      <GUID>49FD9AAF3C2D9423F0B7795D8DFFFBF2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>44</Parent_Palette_Index>
@@ -3012,7 +2994,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\Bind RPC MicronGRPC Message.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\Bind RPC MicronGRPC Message.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -3026,7 +3008,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\Get MicronGRPC Message Request.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\Get MicronGRPC Message Request.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -3040,7 +3022,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\RPC Method MicronGRPC Message.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\RPC Method MicronGRPC Message.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -3054,10 +3036,10 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\Set MicronGRPC Message Response.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\RPC Methods\Set MicronGRPC Message Response.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D6B07E10F1F8EC607750100B1CAD7546</GUID>
+      <GUID>D12EA40A220B1F2A55FAF081F91FFB44</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>44</Parent_Palette_Index>
@@ -3089,7 +3071,7 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Destroy.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Destroy.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -3103,7 +3085,7 @@
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Register gRPC Methods.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Register gRPC Methods.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -3117,7 +3099,7 @@
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Start Async.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Start Async.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -3131,10 +3113,10 @@
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolkitVIs\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Start Sync.vi</Path>
+        <Path>Source\vi.lib\Micron\gRPC\Server\Service\Generated\MicronGRPCGeneratedServer\RPC Service\MicronGRPC\Server API\Start Sync.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F8816E1B0DEBABC3694F60A6089FFEB3</GUID>
+      <GUID>82399025862F8BB6816E866F21743B38</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -3166,10 +3148,10 @@
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>Source\ToolsMenu\Micron\Create Micron.vi</Path>
+        <Path>Source\project\Micron\Create Micron.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F39DB92796D60E3171CDC820273BE03B</GUID>
+      <GUID>E86421D5EA867058A26E02840A281ED4</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
