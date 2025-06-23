@@ -174,6 +174,7 @@
 				<Item Name="VariantType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/VariantDataType/VariantType.lvlib"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="MicronCLI.lvclass" Type="LVClass" URL="../MicronCLI/MicronCLI.lvclass"/>
 			<Item Name="MicronTemplateLocationPlaceholder.vi" Type="VI" URL="../../../ProjectTemplates/Source/Micron/MicronTemplateLocationPlaceholder.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>

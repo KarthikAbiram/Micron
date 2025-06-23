@@ -26,7 +26,7 @@ var registerCmd = &cobra.Command{
 You can provide arguments either as flags or as positional arguments:
 
 Flags style:
-  micronCLI register --network mynetwork --serviceID myservice --connection localhost:50051
+  micronCLI register --network mynetwork --service-id myservice --connection localhost:50051
 
 Positional style:
   micronCLI register mynetwork myservice localhost:50051
@@ -71,6 +71,6 @@ func init() {
 
 	// Define flags
 	registerCmd.Flags().StringVar(&networkFlag, "network", "", "Network name")
-	registerCmd.Flags().StringVar(&serviceIDFlag, "serviceID", "", "Service name")
+	registerCmd.Flags().StringVar(&serviceIDFlag, "service-id", "", "Service ID")
 	registerCmd.Flags().StringVar(&connectionFlag, "connection", "", "Connection string")
 }

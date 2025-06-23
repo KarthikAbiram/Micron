@@ -25,7 +25,7 @@ var queryCmd = &cobra.Command{
 You can use either flags or positional arguments:
 
 Flags style:
-  micronCLI query --network mynetwork --serviceID myservice
+  micronCLI query --network mynetwork --service-id myservice
 
 Positional style:
   micronCLI query mynetwork myservice
@@ -68,5 +68,5 @@ func init() {
 	rootCmd.AddCommand(queryCmd)
 
 	queryCmd.Flags().StringVar(&queryNetwork, "network", "", "Network name")
-	queryCmd.Flags().StringVar(&queryServiceID, "serviceID", "", "Service name")
+	queryCmd.Flags().StringVar(&queryServiceID, "service-id", "", "Service ID")
 }

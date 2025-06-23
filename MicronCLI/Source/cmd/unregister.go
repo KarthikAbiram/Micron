@@ -25,7 +25,7 @@ var unregisterCmd = &cobra.Command{
 You can provide input either as flags or positional arguments:
 
 Flag style:
-  micronCLI unregister --network mynetwork --serviceID myservice
+  micronCLI unregister --network mynetwork --service-id myservice
 
 Positional style:
   micronCLI unregister mynetwork myservice
@@ -66,5 +66,5 @@ func init() {
 	rootCmd.AddCommand(unregisterCmd)
 
 	unregisterCmd.Flags().StringVar(&unregNetwork, "network", "", "Network name")
-	unregisterCmd.Flags().StringVar(&unregServiceID, "serviceID", "", "Service name")
+	unregisterCmd.Flags().StringVar(&unregServiceID, "service-id", "", "Service ID")
 }
