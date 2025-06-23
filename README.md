@@ -1,7 +1,8 @@
 # Micron's Vision
-The vision of micron is to allow users to create applications made up of microservices that can easily invoke and call each other. This allows you to leverage the best of different programming languages, without being constrainted to a single programming language.
-
-Micron aims to provide tooling, libraries and batteries to reduce the barrier of entry in creating microservices in different programming languages.
+- Enable easy exchange and swapping of microservices built with different programming languages easily.
+- Create a docker compose type system for service executables, instead of containers.
+- Provide tooling, libraries and batteries missing in default gRPC, like a client starting and stopping services.
+- Reduce the barrier of entry in creating microservices in different programming languages.
 
 # Languages
 Currently supported languages: LabVIEW
