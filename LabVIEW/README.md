@@ -16,9 +16,5 @@ Download [grpc-labview.zip](https://github.com/ni/grpc-labview/releases/tag/v1.5
 Download and install the latest version of LabVIEW micron package (micron-x.x.x.x.vip)  from [Micron github releases](https://github.com/KarthikAbiram/Micron/releases).
 
 ## Usage
-
-### Create New Microservice
-
-### Run in Source
-
-### Build & Run
+Available in Tools -> Micron -> Create New Microservice
+APIs available in Functions Palette -> Data Communication -> Micron 
