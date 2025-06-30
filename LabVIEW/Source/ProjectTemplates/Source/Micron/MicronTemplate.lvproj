@@ -22,6 +22,7 @@
 			</Item>
 		</Item>
 		<Item Name="Service" Type="Folder">
+			<Item Name="Micron.ini" Type="Document" URL="../Service/Micron.ini"/>
 			<Item Name="MicronTemplateService.lvlib" Type="Library" URL="../Service/MicronTemplateService.lvlib"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -91,6 +92,7 @@
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{551B822F-AA11-485C-8C7B-FE320E17EEAC}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{C71E9CB0-16FE-45BA-9742-0E52C719CD4A}</Property>
+				<Property Name="App_INI_itemID" Type="Ref">/My Computer/Service/Micron.ini</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{7EFCEFC8-64CC-4DEB-BA70-9E58272DEA78}</Property>
@@ -115,7 +117,7 @@
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{FB6E1A19-E664-488E-A124-D5F8F7684F25}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{CF49DB16-499E-459E-A531-7A021358A6F3}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Service/MicronTemplateService.lvlib/Main.vi</Property>
