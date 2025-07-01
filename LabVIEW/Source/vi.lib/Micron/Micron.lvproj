@@ -13,12 +13,6 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Base" Type="Folder">
 			<Item Name="Client" Type="Folder">
-				<Item Name="Methods" Type="Folder">
-					<Item Name="APIs" Type="Folder">
-						<Item Name="StartLegacy.vi" Type="VI" URL="../Base/Client/Methods/APIs/StartLegacy.vi"/>
-					</Item>
-				</Item>
-				<Item Name="Typedefs" Type="Folder"/>
 				<Item Name="MicronClient.lvclass" Type="LVClass" URL="../Base/Client/MicronClient.lvclass"/>
 			</Item>
 			<Item Name="Server" Type="Folder">
