@@ -265,8 +265,10 @@
 				<Property Name="Destination[5].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">6</Property>
 				<Property Name="Source[0].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[0].Container.applyPrefix" Type="Bool">true</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">5</Property>
-				<Property Name="Source[0].itemID" Type="Str">{9A48AF1B-EA8A-4FCA-B811-65C6ADB49414}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{514B471B-3D92-4B99-A980-B4A22D235F87}</Property>
+				<Property Name="Source[0].newName" Type="Str">[%Micron_Template%]</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
