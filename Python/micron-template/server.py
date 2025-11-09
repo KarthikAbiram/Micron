@@ -1,4 +1,5 @@
 from concurrent import futures
+from datetime import datetime
 import logging
 import time
 import subprocess
@@ -25,10 +26,12 @@ class Micron(micron_pb2_grpc.MicronGRPCServicer):
             global stop_flag
             reply.payload = "Stopping..."
             stop_flag = True
-        else:
+        elif cmd == "ping":
             reply.payload = f"Hello {payload}"
+        else:
+            reply.payload = f"Echo {cmd}:{payload}"
 
-        print(f"{request.command}:{payload} -> {reply.payload}")
+        print(f"{datetime.now()} {request.command}:{payload} -> {reply.payload}")
         return reply
 
 def serve(network="default", service_id="pymicron", port=50052, **kwargs):
@@ -40,6 +43,7 @@ def serve(network="default", service_id="pymicron", port=50052, **kwargs):
     server.start()
     print(f"Server started, listening on {port}")
     register_service(network, service_id, f"localhost:{port}", skip_register_on_error)
+    print("Waiting for commands from client...")
 
     while True:
         if stop_flag:
@@ -58,7 +62,11 @@ def register_service(network, service_id, connection, skip_on_error=True):
         ["micronCLI","register","--network", network,"--service-id", service_id,"--connection", connection],
         capture_output=True,
         text=True)
-        print("Exit code:", result.returncode, result.stdout, result.stderr)
+        if result.returncode == 0:
+            print(f"Successfully registered the micron service '{service_id}' in network '{network}' with connection string '{connection}'")
+        else:
+            print(f"Failed to register the micron service '{service_id}' in network '{network}' with micronCLI")
+            print("Status :", result.returncode, result.stdout, result.stderr)
     except Exception as e:
         if skip_on_error:
             pass
@@ -72,7 +80,11 @@ def unregister_service(network, service_id, skip_on_error=True):
         capture_output=True,
         text=True
         )
-        print("Exit code:", result.returncode, result.stdout, result.stderr)
+        if result.returncode == 0:
+            print(f"Successfully unregistered the micron service '{service_id}' in network '{network}'")
+        else:
+            print(f"Failed to unregister the micron service '{service_id}' in network '{network}' with micronCLI")
+            print("Status :", result.returncode, result.stdout, result.stderr)
     except Exception as e:
         if skip_on_error:
             pass

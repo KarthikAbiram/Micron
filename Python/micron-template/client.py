@@ -1,5 +1,5 @@
 import logging
-
+from datetime import datetime
 import grpc
 import generated.micron_pb2 as micron_pb2
 import generated.micron_pb2_grpc as micron_pb2_grpc
@@ -9,15 +9,31 @@ def run():
     with grpc.insecure_channel("localhost:50052") as channel:
         micron = micron_pb2_grpc.MicronGRPCStub(channel)
 
-        # Send a ping command
-        input = micron_pb2.MessageRequest(command="Ping", payload="Micron Client")
-        response = micron.Message(input)
-        print(f"{input.command}:{input.payload} -> {response.payload}")
+        # Create micron message
+        message = micron_pb2.MessageRequest(command="Ping", payload="Micron Client")
 
-        # Send a stop command to stop the server
-        input.command = "Stop"
-        response = micron.Message(input)
-        print(f"{input.command}:{input.payload} -> {response.payload}")
+        # Loop for sending multiple commands to server based on user choice
+        stop_flag = False
+        while not stop_flag:
+            choice = input("\nChoose command: 1. Ping 2. Custom Message 3. Stop\n")
+
+            if choice == "1":
+                message.command = "Ping"
+                message.payload = "Micron Client"
+            elif choice == "2":
+                message.command = input("Enter custom command:")
+                message.payload = input("Enter payload:")
+            elif choice == "3":
+                message.command = "Stop"
+                message.payload = "Micron Client"
+                stop_flag = True
+            else:
+                print("Invalid choice. Pinging instead.")
+                message.command = "Ping"
+                message.payload = "Micron Client"
+
+            response = micron.Message(message)
+            print(f"{datetime.now()} {message.command}:{message.payload} -> {response.payload}")
 
 
 if __name__ == "__main__":

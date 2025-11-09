@@ -9,3 +9,8 @@ dependencies = [
     "grpcio>=1.76.0",
     "grpcio-tools>=1.76.0",
 ]
+
+[dependency-groups]
+dev = [
+    "cx-freeze>=8.4.1",
+]
