@@ -1,18 +1,24 @@
 # Setup
-Install [uv](https://xtldr.com/uv/)
+Install [uv](https://xtldr.com/uv/) and [make](https://xtldr.com/make/)
 
 To create virtual environment and install dependencies:
 ```
-uv sync
+make install
 ```
 
 # Run Source
 To run server:
 ```
-uv run server.py
+make run-server
 ```
 
 To run client, open another terminal and run:
 ```
-uv run client.py
+make run-client
+```
+
+# Build
+To build both server and client:
+```
+make build
 ```

@@ -57,12 +57,6 @@ clean:
 	$(RM) $(BUILD_DIR)
 	@echo "🧹 Cleaned build directories."
 
-# ===== Lock Dependencies =====
-.PHONY: lock
-lock:
-	uv lock
-	@echo "🔒 Dependencies locked."
-
 # ===== Help =====
 .PHONY: help
 help:
@@ -72,4 +66,3 @@ help:
 	@echo "  make run-client    - Run client.py"
 	@echo "  make build         - Build both executables"
 	@echo "  make clean         - Remove build artifacts"
-	@echo "  make lock          - Lock dependencies"
