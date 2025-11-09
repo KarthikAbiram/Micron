@@ -39,7 +39,7 @@ def serve(network="default", service_id="pymicron", port=50052, **kwargs):
     skip_register_on_error = False
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     micron_pb2_grpc.add_MicronGRPCServicer_to_server(Micron(), server)
-    server.add_insecure_port("[::]:" + str(port))
+    port = server.add_insecure_port("[::]:" + str(port))
     server.start()
     print(f"Server started, listening on {port}")
     register_service(network, service_id, f"localhost:{port}", skip_register_on_error)
