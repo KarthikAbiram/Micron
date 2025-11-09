@@ -1,14 +1,20 @@
-# ===== Project Settings =====
+# -*- coding: utf-8 -*-
 
 # Automatically get the name of the top-level project folder
 APP_NAME := $(notdir $(CURDIR))
 
 PYTHON = uv run python
 BUILD_DIR = build
-DIST_DIR = dist
 
 SERVER_APP = $(APP_NAME)
 CLIENT_APP = $(APP_NAME)_client
+
+# Detect OS for cross-platform clean
+ifeq ($(OS),Windows_NT)
+    RM = powershell Remove-Item -Recurse -Force
+else
+    RM = rm -rf
+endif
 
 # ===== Targets =====
 
@@ -22,10 +28,12 @@ install:
 # ===== Run Targets =====
 .PHONY: run run-server
 run-server:
+	@echo "🚀 Starting server..."
 	$(PYTHON) server.py
 
 .PHONY: run-client
 run-client:
+	@echo "🚀 Starting client..."
 	$(PYTHON) client.py
 
 # ===== Build Targets =====
@@ -46,7 +54,7 @@ build-client:
 # ===== Clean Targets =====
 .PHONY: clean
 clean:
-	rm -rf $(BUILD_DIR) $(DIST_DIR)
+	$(RM) $(BUILD_DIR)
 	@echo "🧹 Cleaned build directories."
 
 # ===== Lock Dependencies =====
