@@ -22,3 +22,6 @@ To build both server and client:
 ```
 make build
 ```
+
+For more details, please refer to https://github.com/KarthikAbiram/Micron/tree/main/Python/micron-template
+
