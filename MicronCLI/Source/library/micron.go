@@ -2,11 +2,19 @@ package library
 
 import (
 	"fmt"
+	"io/fs"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
-func GetNetworkFolderPath(network string) (string, error) {
+type ConnectionInfo struct {
+	Network          string
+	Service          string
+	ConnectionString string
+}
+
+func GetMicronNetworksDirectory() (string, error) {
 	// Step 1: Get the AppData folder directory (platform-independent approach)
 	appDataDir, err := os.UserConfigDir() // Use UserConfigDir for application-specific config
 	if err != nil {
@@ -14,7 +22,23 @@ func GetNetworkFolderPath(network string) (string, error) {
 	}
 
 	// Step 2: Create the Networks directory and network-specific file path
-	networkDir := filepath.Join(appDataDir, "Micron", "Networks", network)
+	micronNetworksDir := filepath.Join(appDataDir, "Micron", "Networks")
+	if err := os.MkdirAll(micronNetworksDir, os.ModePerm); err != nil {
+		return "", fmt.Errorf("failed to create Network directory: %v", err)
+	}
+
+	return micronNetworksDir, err
+}
+
+func GetNetworkFolderPath(network string) (string, error) {
+	// Step 1: Get Micron Networks directory
+	micronNetworksDir, err := GetMicronNetworksDirectory()
+	if err != nil {
+		return "", fmt.Errorf("failed to get Micron networks directory: %v", err)
+	}
+
+	// Step 2: Create the Network folder and network-specific file path
+	networkDir := filepath.Join(micronNetworksDir, network)
 	if err := os.MkdirAll(networkDir, os.ModePerm); err != nil {
 		return "", fmt.Errorf("failed to create Network directory: %v", err)
 	}
@@ -76,6 +100,53 @@ func QueryService(network, service string) (string, error) {
 	connectionString := string(data)
 
 	return connectionString, err
+}
+
+func ListNetworkAndServices(network string) ([]ConnectionInfo, error) {
+	var connections []ConnectionInfo
+	var connectionString string
+	// Step 1: Get Micron Networks directory
+	micronNetworksDir, err := GetMicronNetworksDirectory()
+	if err != nil {
+		return connections, fmt.Errorf("failed to get Micron networks directory: %v", err)
+	}
+
+	//Step 2: Update query path, if a network is passed as an argument
+	queryPath := micronNetworksDir
+	if network != "" {
+		queryPath = filepath.Join(micronNetworksDir, network)
+	}
+
+	//Step 3: Get list of all service files under the query path
+	var serviceFilePaths []string
+	err = filepath.WalkDir(queryPath, func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err // stop walking if there's an error
+		}
+
+		if !d.IsDir() && filepath.Ext(d.Name()) == ".txt" {
+			serviceFilePaths = append(serviceFilePaths, path)
+		}
+		return nil
+	})
+
+	//Step 4: Iterate over each and return network, service and connection string
+	for _, serviceFilePath := range serviceFilePaths {
+		network := filepath.Base(filepath.Dir(serviceFilePath))
+		service := strings.TrimSuffix(
+			filepath.Base(serviceFilePath),
+			filepath.Ext(serviceFilePath),
+		)
+		connectionString, err = QueryService(network, service)
+
+		connections = append(connections, ConnectionInfo{
+			Network:          network,
+			Service:          service,
+			ConnectionString: connectionString,
+		})
+	}
+
+	return connections, err
 }
 
 // Clear/reset a network

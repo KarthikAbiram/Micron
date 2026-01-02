@@ -22,6 +22,11 @@ Usage examples:
     micronCLI register --network mynetwork --service-id myservice --connection localhost:50051
     micronCLI register mynetwork myservice localhost:50051
 
+  List available networks and services:
+	micronCLI list
+	micronCLI list --network mynetwork
+	micronCLI list mynetwork
+
   Query a service:
     micronCLI query --network mynetwork --service-id myservice
     micronCLI query mynetwork myservice
