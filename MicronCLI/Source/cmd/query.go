@@ -4,8 +4,8 @@ Copyright © 2025 KarthikAbiram, MIT License
 package cmd
 
 import (
-	"MicronCLI/library"
 	"fmt"
+	"microncli/library"
 	"os"
 	"strings"
 

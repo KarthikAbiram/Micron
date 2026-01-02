@@ -2,6 +2,15 @@
 https://github.com/spf13/cobra-cli/blob/main/README.md
 https://github.com/spf13/cobra/blob/main/site/content/user_guide.md#using-the-cobra-library
 
+## To Generate go GRPC Client
+Execute below command from project root directory ("Source"):
+
+protoc \
+  --go_out=library/grpcclient \
+  --go-grpc_out=library/grpcclient \
+  library/grpcclient/micron.proto
+
+
 # Commands
 Run below commands from the folder which contains main.go:
 

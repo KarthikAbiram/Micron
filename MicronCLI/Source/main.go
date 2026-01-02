@@ -3,7 +3,7 @@ Copyright © 2025 KarthikAbiram, MIT License
 */
 package main
 
-import "MicronCLI/cmd"
+import "microncli/cmd"
 
 func main() {
 	cmd.Execute()

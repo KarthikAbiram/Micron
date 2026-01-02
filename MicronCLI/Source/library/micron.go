@@ -3,6 +3,7 @@ package library
 import (
 	"fmt"
 	"io/fs"
+	"microncli/library/grpcclient"
 	"os"
 	"path/filepath"
 	"strings"
@@ -147,6 +148,31 @@ func ListNetworkAndServices(network string) ([]ConnectionInfo, error) {
 	}
 
 	return connections, err
+}
+
+func MessageService(network, service, command, payload string) (string, error) {
+	// fmt.Println(network, service, command, payload)
+	//Step 1 : Get service connection string
+	connectionString, err := QueryService(network, service)
+	if err != nil {
+		return "", fmt.Errorf("failed to get connection string for %s/%s: %w", network, service, err)
+	}
+
+	// Step 2: Create gRPC client
+	client, err := grpcclient.New(connectionString)
+	if err != nil {
+		return "", fmt.Errorf("failed to connect to gRPC service: %w", err)
+	}
+	defer client.Close()
+
+	// Step 3: Send the message
+	resp, err := client.SendMessage(command, payload)
+	if err != nil {
+		return "", fmt.Errorf("error sending message via gRPC: %w", err)
+	}
+
+	// Step 4: Return the payload (or any other info)
+	return resp.GetPayload(), err
 }
 
 // Clear/reset a network
