@@ -37,8 +37,8 @@ Positional style:
 		// Use flags if set
 		network := strings.ToLower(msgNetwork)
 		service := strings.ToLower(msgService)
-		command := strings.ToLower(msgCommand)
-		payload := strings.ToLower(msgPayload)
+		command := msgCommand
+		payload := msgPayload
 
 		// Fallback to positional args if needed
 		if network == "" && len(args) > 0 {
@@ -48,10 +48,10 @@ Positional style:
 			service = strings.ToLower(args[1])
 		}
 		if command == "" && len(args) > 2 {
-			command = strings.ToLower(args[2])
+			command = args[2]
 		}
 		if payload == "" && len(args) > 3 {
-			payload = strings.ToLower(args[3])
+			payload = args[3]
 		}
 
 		// List available network and services
