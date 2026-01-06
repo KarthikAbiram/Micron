@@ -43,7 +43,7 @@ Usage examples:
 		// Perform clear operation
 		err := library.Clear(network)
 		if err != nil {
-			fmt.Println("Error:", err)
+			fmt.Fprintln(os.Stderr, "Error:", err)
 			os.Exit(1)
 		}
 

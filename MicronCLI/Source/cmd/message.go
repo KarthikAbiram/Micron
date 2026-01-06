@@ -58,7 +58,7 @@ Positional style:
 		response, err := library.MessageService(network, service, command, payload)
 		fmt.Println(response)
 		if err != nil {
-			fmt.Println("Error:", err)
+			fmt.Fprintln(os.Stderr, "Error:", err)
 			os.Exit(1)
 		}
 	},

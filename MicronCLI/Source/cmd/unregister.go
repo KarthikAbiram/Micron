@@ -54,7 +54,7 @@ Positional style:
 		// Call the unregister logic
 		err := library.UnregisterService(network, serviceID)
 		if err != nil {
-			fmt.Println("Error:", err)
+			fmt.Fprintln(os.Stderr, "Error:", err)
 			os.Exit(1)
 		}
 

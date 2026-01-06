@@ -57,7 +57,7 @@ Positional style:
 
 		// connStr, err := library.QueryService(network, serviceID)
 		// if err != nil {
-		// 	fmt.Println("Error:", err)
+		// 	fmt.Fprintln(os.Stderr, "Error:", err)
 		// 	os.Exit(1)
 		// }
 		fmt.Println(connStr)

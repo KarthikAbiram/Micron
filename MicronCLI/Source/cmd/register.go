@@ -60,7 +60,7 @@ Positional style:
 
 		err := library.RegisterService(network, serviceID, connection)
 		if err != nil {
-			fmt.Println("Error:", err)
+			fmt.Fprintln(os.Stderr, "Error:", err)
 			os.Exit(1)
 		}
 	},

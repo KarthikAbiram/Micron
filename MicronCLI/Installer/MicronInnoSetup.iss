@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "MicronCLI"
-#define MyAppVersion "0.3"
+#define MyAppVersion "0.3.1"
 #define MyAppPublisher "Karthik Abiram"
 #define MyAppURL "https://github.com/KarthikAbiram/Micron"
 #include "environment.iss"
