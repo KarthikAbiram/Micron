@@ -27,7 +27,7 @@ var messageCmd = &cobra.Command{
 You can use either flags or positional arguments:
 
 Flags style:
-  micronCLI message --network mynetwork --service myservice --command mycommand --payload mypayload
+  micronCLI message --network mynetwork --service-id myservice --command mycommand --payload mypayload
 
 Positional style:
   micronCLI message mynetwork myservice mycommand mypayload
@@ -68,7 +68,7 @@ func init() {
 	rootCmd.AddCommand(messageCmd)
 
 	messageCmd.Flags().StringVar(&msgNetwork, "network", "", "Network name")
-	messageCmd.Flags().StringVar(&msgService, "service", "", "Service name")
+	messageCmd.Flags().StringVar(&msgService, "service-id", "", "Service ID")
 	messageCmd.Flags().StringVar(&msgCommand, "command", "", "Command name")
 	messageCmd.Flags().StringVar(&msgPayload, "payload", "", "Payload")
 }
