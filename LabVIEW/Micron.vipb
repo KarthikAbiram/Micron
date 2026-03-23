@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-03-22 14:44:49" Creator="karthik.abiram" Comments="" ID="efcfb54cd563b665dd416a83a1c70206">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-03-22 23:04:11" Creator="karthik.abiram" Comments="" ID="1ecb351c9b5d87dd7b68cfcb9b8283d4">
   <Library_General_Settings>
     <Package_File_Name>Micron</Package_File_Name>
-    <Library_Version>0.3.0.41</Library_Version>
+    <Library_Version>0.3.0.42</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>Source</Library_Source_Folder>
     <Library_Output_Folder>..\Builds\LabVIEW</Library_Output_Folder>
@@ -281,7 +281,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Path>Source\vi.lib\Micron\Tools\CreateMicron.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3790ED9D4A7644FAB1FA5823C0579860</GUID>
+      <GUID>DA80049C373CCEF7BC77578C415FCE48</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -414,7 +414,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\GetServiceInfo.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>1007A49394D02EDBF2E4C9C63047C7E6</GUID>
+      <GUID>5DB115E2F637A5A6C66A575CB68E0D45</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -519,7 +519,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Path>Source\vi.lib\Micron\gRPC\Client\Helper\StartAsGRPC.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4E18A42485C4915C53E78B6AB00E47F6</GUID>
+      <GUID>29CC4D449D2EA966A586CD56ADBD4788</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -638,7 +638,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Path>Source\vi.lib\Micron\MicronCLI\Methods\Message.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E4A60774FF4298E06A1A12257FF9075E</GUID>
+      <GUID>C47037179D39FD9E2346F333FDA06073</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
