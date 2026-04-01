@@ -10,6 +10,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var Version = "0.4"
+
 // rootCmd represents the base command when called without any subcommands.
 var rootCmd = &cobra.Command{
 	Use:   "micronCLI",
@@ -39,6 +41,7 @@ Usage examples:
     micronCLI clear --network mynetwork
     micronCLI clear mynetwork
 `,
+	Version: Version,
 	CompletionOptions: cobra.CompletionOptions{
 		HiddenDefaultCmd: true, // hides cmd
 		// DisableDefaultCmd: true, // removes cmd
