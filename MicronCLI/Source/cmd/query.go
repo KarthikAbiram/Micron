@@ -69,4 +69,7 @@ func init() {
 
 	queryCmd.Flags().StringVar(&queryNetwork, "network", "", "Network name")
 	queryCmd.Flags().StringVar(&queryServiceID, "service-id", "", "Service ID")
+
+	//Ignore unknown flags
+	registerCmd.FParseErrWhitelist.UnknownFlags = true
 }

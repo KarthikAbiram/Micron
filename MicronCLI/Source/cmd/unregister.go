@@ -67,4 +67,7 @@ func init() {
 
 	unregisterCmd.Flags().StringVar(&unregNetwork, "network", "", "Network name")
 	unregisterCmd.Flags().StringVar(&unregServiceID, "service-id", "", "Service ID")
+
+	//Ignore unknown flags
+	registerCmd.FParseErrWhitelist.UnknownFlags = true
 }

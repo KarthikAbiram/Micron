@@ -68,4 +68,7 @@ func init() {
 	rootCmd.AddCommand(listCmd)
 
 	listCmd.Flags().StringVar(&listNetwork, "network", "", "Network name")
+
+	//Ignore unknown flags
+	registerCmd.FParseErrWhitelist.UnknownFlags = true
 }

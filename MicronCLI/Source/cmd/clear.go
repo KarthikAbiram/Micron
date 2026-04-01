@@ -55,4 +55,7 @@ func init() {
 	rootCmd.AddCommand(clearCmd)
 
 	clearCmd.Flags().StringVar(&clearNetwork, "network", "", "Network name to clear")
+
+	//Ignore unknown flags
+	registerCmd.FParseErrWhitelist.UnknownFlags = true
 }

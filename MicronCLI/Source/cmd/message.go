@@ -71,4 +71,7 @@ func init() {
 	messageCmd.Flags().StringVar(&msgService, "service-id", "", "Service ID")
 	messageCmd.Flags().StringVar(&msgCommand, "command", "", "Command name")
 	messageCmd.Flags().StringVar(&msgPayload, "payload", "", "Payload")
+
+	//Ignore unknown flags
+	registerCmd.FParseErrWhitelist.UnknownFlags = true
 }
