@@ -41,25 +41,27 @@ Positional style:
 
 		// List available network and services
 		connections, err := library.ListNetworkAndServices(network)
-		if len(connections) == 0 {
-			fmt.Println("No active network/services present")
-		} else {
-			fmt.Printf("%-15s %-15s %s\n", "Network", "Service", "Connection")
-			fmt.Println(strings.Repeat("-", 60))
-
-			for _, c := range connections {
-				fmt.Printf(
-					"%-15s %-15s %s\n",
-					c.Network,
-					c.Service,
-					c.ConnectionString,
-				)
-			}
-		}
-
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "Error:", err)
 			os.Exit(1)
+		}
+
+		if len(connections) == 0 {
+			fmt.Println("No active network/services present")
+		} else {
+			fmt.Printf("%-15s %-15s %-15s %-15s %-15s\n", "Network", "Service", "Connection", "Status", "Info")
+			fmt.Println(strings.Repeat("-", 100))
+
+			for _, c := range connections {
+				fmt.Printf(
+					"%-15s %-15s %-15s %-15d %-25s\n",
+					c.Network,
+					c.Service,
+					c.ConnectionString,
+					c.Status,
+					c.Info,
+				)
+			}
 		}
 	},
 }

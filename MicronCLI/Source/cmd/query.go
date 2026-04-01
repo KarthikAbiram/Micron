@@ -52,7 +52,7 @@ Positional style:
 		}
 
 		// Perform query
-		connStr, _ := library.QueryService(network, serviceID)
+		connection, _ := library.QueryService(network, serviceID)
 		//Ignore error, which would occur if service has not been registered
 
 		// connStr, err := library.QueryService(network, serviceID)
@@ -60,7 +60,13 @@ Positional style:
 		// 	fmt.Fprintln(os.Stderr, "Error:", err)
 		// 	os.Exit(1)
 		// }
-		fmt.Println(connStr)
+		fmt.Println(connection.ConnectionString)
+
+		//If the service had reported an error, return that error
+		if connection.Status != 0 {
+			fmt.Fprintln(os.Stderr, "Error:", connection.Status, connection.Info)
+			os.Exit(connection.Status)
+		}
 	},
 }
 
