@@ -32,7 +32,7 @@ Flags style:
 Positional style:
   micronCLI message mynetwork myservice mycommand mypayload
 `,
-	Args: cobra.MaximumNArgs(4),
+	Args: cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		// Use flags if set
 		network := strings.ToLower(msgNetwork)

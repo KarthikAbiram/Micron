@@ -30,7 +30,7 @@ Flags style:
 Positional style:
   micronCLI query mynetwork myservice
 `,
-	Args: cobra.MaximumNArgs(2),
+	Args: cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		// Use flags if set
 		network := strings.ToLower(queryNetwork)

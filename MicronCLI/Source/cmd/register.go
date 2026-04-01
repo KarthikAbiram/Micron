@@ -31,7 +31,7 @@ Flags style:
 Positional style:
   micronCLI register mynetwork myservice localhost:50051
 `,
-	Args: cobra.MaximumNArgs(3),
+	Args: cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		var network, serviceID, connection string
 

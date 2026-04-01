@@ -25,7 +25,7 @@ Usage examples:
   micronCLI clear --network mynetwork
   micronCLI clear mynetwork
 `,
-	Args: cobra.MaximumNArgs(1),
+	Args: cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		network := strings.ToLower(clearNetwork)
 

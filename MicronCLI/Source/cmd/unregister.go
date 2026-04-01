@@ -30,7 +30,7 @@ Flag style:
 Positional style:
   micronCLI unregister mynetwork myservice
 `,
-	Args: cobra.MaximumNArgs(2),
+	Args: cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		// Read flags first
 		network := strings.ToLower(unregNetwork)

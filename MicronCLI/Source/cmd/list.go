@@ -29,7 +29,7 @@ Flags style:
 Positional style:
   micronCLI list mynetwork
 `,
-	Args: cobra.MaximumNArgs(1),
+	Args: cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		// Use flags if set
 		network := strings.ToLower(listNetwork)
