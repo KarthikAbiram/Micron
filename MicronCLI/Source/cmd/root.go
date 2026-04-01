@@ -44,12 +44,17 @@ Usage examples:
 	Version: Version,
 	CompletionOptions: cobra.CompletionOptions{
 		HiddenDefaultCmd: true, // hides cmd
-		// DisableDefaultCmd: true, // removes cmd
 	},
-	// Uncomment to add a default action:
-	// Run: func(cmd *cobra.Command, args []string) {
-	//     fmt.Println("MicronCLI called. Use --help to see available commands.")
-	// },
+}
+
+// versionCmd represents the version command.
+var versionCmd = &cobra.Command{
+	Use:   "version",
+	Short: "Print the version number",
+	Run: func(cmd *cobra.Command, args []string) {
+		// Only print the version number
+		fmt.Println(Version)
+	},
 }
 
 // Execute is called by main.main(). It runs the CLI.
@@ -62,6 +67,9 @@ func Execute() {
 }
 
 func init() {
+	// Add the version command as a subcommand to rootCmd
+	rootCmd.AddCommand(versionCmd)
+
 	// You can define global flags here using PersistentFlags (e.g., a global --config flag).
 	// Example:
 	// rootCmd.PersistentFlags().String("config", "", "Path to config file")
