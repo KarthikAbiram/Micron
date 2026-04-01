@@ -58,7 +58,7 @@ Positional style:
 		}
 
 		// Validate required args
-		if network == "" || serviceID == "" || (connection == "" && status != 0) {
+		if network == "" || serviceID == "" || (connection == "" && status == 0) {
 			fmt.Println("Error: network, service, and connection/status are required.")
 			fmt.Println(cmd.UsageString())
 			os.Exit(1)
