@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-03-22 23:04:11" Creator="karthik.abiram" Comments="" ID="1ecb351c9b5d87dd7b68cfcb9b8283d4">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-04-01 01:15:00" Creator="karthik.abiram" Comments="" ID="c4551fb5635a4aa643b21a6a546e37af">
   <Library_General_Settings>
     <Package_File_Name>Micron</Package_File_Name>
-    <Library_Version>0.3.0.42</Library_Version>
+    <Library_Version>0.4.0.44</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>Source</Library_Source_Folder>
     <Library_Output_Folder>..\Builds\LabVIEW</Library_Output_Folder>
@@ -39,7 +39,7 @@
 
 Available in &lt;b&gt;Tools -&gt; Micron -&gt; Create New Microservice &lt;/b&gt;
 
-APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Micron &lt;/b&gt;
+APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&gt;
 
 </Description>
       <Copyright>Copyright (c) 2025 Karthik Abiram</Copyright>
@@ -168,9 +168,9 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Syncing_MNU_file/>
       </Controls_Palette_Information>
       <Functions_Palette_Information>
-        <Virtual_Palette_Base_Path>Functions\Data Communication</Virtual_Palette_Base_Path>
-        <Palette_Disk_Base_Path>&lt;menus&gt;\Categories\Data Communication</Palette_Disk_Base_Path>
-        <Syncing_MNU_file>&lt;menus&gt;\Categories\Data Communication\dir.mnu</Syncing_MNU_file>
+        <Virtual_Palette_Base_Path>Functions\Addons</Virtual_Palette_Base_Path>
+        <Palette_Disk_Base_Path>&lt;vi.lib&gt;\addons</Palette_Disk_Base_Path>
+        <Syncing_MNU_file/>
       </Functions_Palette_Information>
       <Apply_Short_Names_to_VI_Titles>false</Apply_Short_Names_to_VI_Titles>
       <Apply_Short_Names_to_VI_Titles_2>false</Apply_Short_Names_to_VI_Titles_2>
@@ -281,7 +281,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Path>Source\vi.lib\Micron\Tools\CreateMicron.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DA80049C373CCEF7BC77578C415FCE48</GUID>
+      <GUID>3B35B36435FEFC41C3C59EE9FB09D157</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -414,7 +414,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\GetServiceInfo.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5DB115E2F637A5A6C66A575CB68E0D45</GUID>
+      <GUID>16D79334040D977004B849D5ED81AE52</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -519,7 +519,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         <Path>Source\vi.lib\Micron\gRPC\Client\Helper\StartAsGRPC.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>29CC4D449D2EA966A586CD56ADBD4788</GUID>
+      <GUID>2F89C28499A9D4031C786D9A28CE0BCF</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -552,20 +552,6 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
         </Position>
         <Icon>00000000</Icon>
         <Path>Source\vi.lib\Micron\MicronCLI\Methods\Construct.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Example.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>Source\vi.lib\Micron\MicronCLI\Example.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -627,18 +613,46 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Data Communication -&gt; Mic
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Example.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>6</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Source\vi.lib\Micron\MicronCLI\Example.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Version.vi</NameSub_Menu_Name>
+        <Short_Name/>
+        <is_Merge_VI>false</is_Merge_VI>
+        <Position>
+          <Row>2</Row>
+          <Column>1</Column>
+        </Position>
+        <Icon>00000000</Icon>
+        <Path>Source\vi.lib\Micron\MicronCLI\Methods\Version.vi</Path>
+        <VI_Title/>
+      </Items_Data>
+      <Items_Data>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
         <NameSub_Menu_Name>Message.vi</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
-          <Row>1</Row>
-          <Column>4</Column>
+          <Row>2</Row>
+          <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
         <Path>Source\vi.lib\Micron\MicronCLI\Methods\Message.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C47037179D39FD9E2346F333FDA06073</GUID>
+      <GUID>004CD5E64081B8408373720D7AAC4A27</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
