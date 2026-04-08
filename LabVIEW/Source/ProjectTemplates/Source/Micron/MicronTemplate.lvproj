@@ -173,7 +173,7 @@
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{612FC642-5EF0-4AE9-908E-FA85D573B128}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{BDF33189-E1F6-468F-992C-9920AB744D8E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Service/MicronTemplateService.lvlib/Main.vi</Property>
@@ -196,10 +196,9 @@
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[4].type" Type="Str">Container</Property>
 				<Property Name="SourceCount" Type="Int">5</Property>
-				<Property Name="TgtF_companyName" Type="Str">Soliton Technologies</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">[%Micron_Template%] Service</Property>
 				<Property Name="TgtF_internalName" Type="Str">[%Micron_Template%] Service</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 Soliton Technologies</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2026 </Property>
 				<Property Name="TgtF_productName" Type="Str">[%Micron_Template%] Service</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{7E44E1BA-DCC3-4CB2-8A41-F1CD3D734D7C}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">[%Micron_Template%]Service.exe</Property>
@@ -228,7 +227,7 @@
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{FB6E1A19-E664-488E-A124-D5F8F7684F25}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{BDF33189-E1F6-468F-992C-9920AB744D8E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/APIs/MicronTemplateAPIs.lvlib</Property>
@@ -246,10 +245,9 @@
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Container</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
-				<Property Name="TgtF_companyName" Type="Str">Soliton Technologies</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">[%Micron_Template%] APIs</Property>
 				<Property Name="TgtF_internalName" Type="Str">[%Micron_Template%] APIs</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 Soliton Technologies</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2026</Property>
 				<Property Name="TgtF_productName" Type="Str">[%Micron_Template%] APIs</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{7DF53EE0-E175-4928-B8A9-F4C2A6F906B2}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">[%Micron_Template%]APIs.lvlibp</Property>
@@ -283,7 +281,7 @@
 				<Property Name="Source[0].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[0].Container.applyPrefix" Type="Bool">true</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">5</Property>
-				<Property Name="Source[0].itemID" Type="Str">{514B471B-3D92-4B99-A980-B4A22D235F87}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{BDF33189-E1F6-468F-992C-9920AB744D8E}</Property>
 				<Property Name="Source[0].newName" Type="Str">[%Micron_Template%]</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].Container.applyDestination" Type="Bool">true</Property>
