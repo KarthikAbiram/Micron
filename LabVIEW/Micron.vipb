@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-04-07 23:25:15" Creator="karthik.abiram" Comments="" ID="565d3cf41a7faefcd3f2295038faea41">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-04-12 20:31:52" Creator="karthik.abiram" Comments="" ID="2bce0a6946f1c15af628210e1ab57d68">
   <Library_General_Settings>
     <Package_File_Name>Micron</Package_File_Name>
-    <Library_Version>0.4.0.47</Library_Version>
+    <Library_Version>0.4.0.49</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>Source</Library_Source_Folder>
     <Library_Output_Folder>..\Builds\LabVIEW</Library_Output_Folder>
@@ -281,7 +281,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\Tools\CreateMicron.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>638C9FC89BA4EA4E48D38818ABB4EF0B</GUID>
+      <GUID>B9FEA0FCBC60D1FBBC656814FB823D60</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -414,7 +414,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\GetServiceInfo.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2607448875EF1832AC0C7569183E4E3A</GUID>
+      <GUID>85EEE0E1E5FAA2CCAB924F99549F9068</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -519,7 +519,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\gRPC\Client\Helper\StartAsGRPC.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7C02130FBEDFBFD4CC091099B6544714</GUID>
+      <GUID>2BB56B099CB1B3FCDE2DC2C119E86875</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -652,7 +652,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\MicronCLI\Methods\Message.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>95263268B1716A305882B1E788595445</GUID>
+      <GUID>72FF65FDB88FA0BB73CD9BBF76A12E0A</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
