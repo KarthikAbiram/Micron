@@ -34,7 +34,7 @@ class Micron(micron_pb2_grpc.MicronGRPCServicer):
         print(f"{datetime.now()} {request.command}:{payload} -> {reply.payload}")
         return reply
 
-def serve(network="default", service_id="pymicron", port=50052, **kwargs):
+def serve(network="default", service_id="pymicron", port=0, **kwargs):
     # print(f"Received Args: network: {network}, service_id: {service_id}, port={port}, kwargs={kwargs}")
     skip_register_on_error = False
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
