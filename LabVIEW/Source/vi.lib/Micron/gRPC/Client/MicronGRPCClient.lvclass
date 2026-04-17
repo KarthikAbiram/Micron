@@ -149,6 +149,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342972432</Property>
 		</Item>
+		<Item Name="StartAsyncEngine.vi" Type="VI" URL="../Methods/StartAsyncEngine.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!).!!!!%!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!&amp;%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!Z!-0````]&amp;5X2B&gt;'5!#E"4"%2B&gt;'%!!$]!]1!!!!!!!!!#$6.-4#"25UUO&lt;(:M;7)/586F&gt;75A6(FQ:3ZD&gt;'Q!'E"1!!)!"Q!)#F&amp;V:86F)&amp;2Z='5!!":!=!!3!!%!#1J*&lt;H"V&gt;&amp;&amp;V:86F!!!71(!!%A!"!!E,4X6U=(6U586F&gt;75!2A$R!!!!!!!!!!)947FD=G^O2V*11U.M;76O&gt;#ZM&gt;G.M98.T%%&amp;T?7ZD1WRV=X2F=CZD&gt;'Q!&amp;%"1!!)!#A!,"5&amp;T?7ZD!"6!=!!A!!%!$!!)18.Z&lt;G.%6F)!!$B!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!%UVJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1A;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!.!!Y$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!%!!!!*!!!!!!!1!0!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+		</Item>
 		<Item Name="AsyncMessageCore.vi" Type="VI" URL="../Methods/AsyncMessageCore.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;M!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!$E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!41!-!$&amp;2J&lt;76P&gt;81A+'VT+1!!&amp;E!B%5.P&lt;'RF9X1A5G6T='^O=W5`!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%%!Q`````Q&gt;198FM&lt;W&amp;E!""!-0````](1W^N&lt;7&amp;O:!!S1(!!(A!!'BB.;7.S&lt;WZ(5F"$1WRJ:7ZU,GRW9WRB=X-!!!V(5F"$1WRJ:7ZU)'FO!&amp;1!]!!-!!-!"!!%!!5!"!!%!!9!"Q!)!!E!#A!,!Q!!?!!!$1A!!!!!!!!!!!!!D1M!!!!!!!!!!!!!#!!!!!!!!!!+!!!##!!!!B!!!!#3!!!!!!%!$!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
@@ -166,6 +175,15 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
+		</Item>
+		<Item Name="StopAsyncEngine.vi" Type="VI" URL="../SubVIs/StopAsyncEngine.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%P!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!&amp;%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$B!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!%UVJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1A;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!*!!!!!!!1!)!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 		</Item>
 		<Item Name="SimulateCore.vi" Type="VI" URL="../Methods/SimulateCore.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;B!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"*!-0````])5G6T='^O=W5!!$J!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!&amp;%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!""!-0````](5'&amp;Z&lt;'^B:!!11$$`````"U.P&lt;7VB&lt;G1!/%"Q!"Y!!"I947FD=G^O2V*11U.M;76O&gt;#ZM&gt;G.M98.T!!!447FD=G^O2V*11U.M;76O&gt;#"J&lt;A"5!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!)!!E!#A-!!(A!!!U)!!!!!!!!$1E!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!1I!!!))!!!!EA!!!!!"!!M!!!!!</Property>
@@ -222,15 +240,6 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1107821056</Property>
-		</Item>
-		<Item Name="StopAsyncEngine.vi" Type="VI" URL="../SubVIs/StopAsyncEngine.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%]!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!&amp;%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$B!=!!?!!!;'%VJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!%UVJ9X*P&lt;E&gt;35%.$&lt;'FF&lt;H1A;7Y!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 		</Item>
 	</Item>
 	<Item Name="Typedefs" Type="Folder">
