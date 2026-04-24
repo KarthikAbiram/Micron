@@ -61,13 +61,13 @@ Positional style:
 		if network == "" || serviceID == "" || (connection == "" && status == 0) {
 			fmt.Println("Error: network, service, and connection/status are required.")
 			fmt.Println(cmd.UsageString())
-			os.Exit(1)
+			os.Exit(100)
 		}
 
 		err := library.RegisterService(network, serviceID, connection, status, info)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "Error:", err)
-			os.Exit(1)
+			os.Exit(100)
 		}
 
 		// fmt.Println("Service successfully registered!")

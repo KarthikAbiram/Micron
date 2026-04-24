@@ -48,7 +48,7 @@ Positional style:
 		if network == "" || serviceID == "" {
 			fmt.Println("Error: both network and service are required.")
 			fmt.Println(cmd.UsageString())
-			os.Exit(1)
+			os.Exit(100)
 		}
 
 		// Perform query
@@ -58,7 +58,7 @@ Positional style:
 		// connStr, err := library.QueryService(network, serviceID)
 		// if err != nil {
 		// 	fmt.Fprintln(os.Stderr, "Error:", err)
-		// 	os.Exit(1)
+		// 	os.Exit(100)
 		// }
 		fmt.Println(connection.ConnectionString)
 

@@ -43,7 +43,7 @@ Positional style:
 		connections, err := library.ListNetworkAndServices(network)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "Error:", err)
-			os.Exit(1)
+			os.Exit(100)
 		}
 
 		if len(connections) == 0 {

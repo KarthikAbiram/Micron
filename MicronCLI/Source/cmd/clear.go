@@ -37,14 +37,14 @@ Usage examples:
 		if network == "" {
 			fmt.Println("Error: network name is required.")
 			fmt.Println(cmd.UsageString())
-			os.Exit(1)
+			os.Exit(100)
 		}
 
 		// Perform clear operation
 		err := library.Clear(network)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "Error:", err)
-			os.Exit(1)
+			os.Exit(100)
 		}
 
 		fmt.Printf("Successfully cleared network '%s'\n", network)
