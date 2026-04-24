@@ -10,6 +10,7 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
+	"google.golang.org/grpc/status"
 )
 
 var (
@@ -58,8 +59,14 @@ Positional style:
 		response, err := library.MessageService(network, service, command, payload)
 		fmt.Println(response)
 		if err != nil {
-			fmt.Fprintln(os.Stderr, "Error:", err)
-			os.Exit(1)
+			st, ok := status.FromError(err)
+			if ok {
+				fmt.Fprintln(os.Stderr, "Error:", st.Message())
+				os.Exit(int(st.Code()))
+			} else {
+				fmt.Fprintln(os.Stderr, "Error:", err)
+				os.Exit(100)
+			}
 		}
 	},
 }

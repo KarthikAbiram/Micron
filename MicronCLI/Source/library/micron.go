@@ -176,14 +176,14 @@ func MessageService(network, service, command, payload string) (string, error) {
 	// Step 2: Create gRPC client
 	client, err := grpcclient.New(connection.ConnectionString)
 	if err != nil {
-		return "", fmt.Errorf("failed to connect to gRPC service: %w", err)
+		return "", err
 	}
 	defer client.Close()
 
 	// Step 3: Send the message
 	resp, err := client.SendMessage(command, payload)
 	if err != nil {
-		return "", fmt.Errorf("error sending message via gRPC: %w", err)
+		return "", err
 	}
 
 	// Step 4: Return the payload (or any other info)
