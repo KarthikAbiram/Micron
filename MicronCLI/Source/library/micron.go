@@ -1,6 +1,7 @@
 package library
 
 import (
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io/fs"
@@ -8,6 +9,14 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
+
+	_ "modernc.org/sqlite"
+)
+
+var (
+	dbConn *sql.DB
+	dbOnce sync.Once
 )
 
 type ConnectionInfo struct {
@@ -85,6 +94,8 @@ func RegisterService(network, service, connectionString string, status int, info
 	}
 
 	// fmt.Println(serviceFilePath)
+	// Log the operation
+	//_ = logToSQLite("Register", network, service, connectionString, status, info, "system", "local-register")
 
 	return nil
 }
@@ -125,6 +136,10 @@ func QueryService(network, service string) (ConnectionInfo, error) {
 }
 
 func ListNetworkAndServices(network string) ([]ConnectionInfo, error) {
+
+	// Log the operation
+	//_ = logToSQLite("List", "", "", "", 0, "", "", "")
+
 	var connections []ConnectionInfo
 	// Step 1: Get Micron Networks directory
 	micronNetworksDir, err := GetMicronNetworksDirectory()
@@ -199,4 +214,60 @@ func Clear(network string) error {
 
 	err = os.RemoveAll(networkDir)
 	return err
+}
+
+// getDB initializes the database connection once (thread-safe)
+func getDB() (*sql.DB, error) {
+	var err error
+	dbOnce.Do(func() {
+		// Place the DB in the Micron root directory
+		appData, _ := os.UserConfigDir()
+		dbPath := filepath.Join(appData, "Micron", "logs.db")
+		print(dbPath)
+
+		// Ensure directory exists
+		os.MkdirAll(filepath.Dir(dbPath), os.ModePerm)
+
+		dbConn, err = sql.Open("sqlite", dbPath)
+		if err != nil {
+			return
+		}
+
+		// Optimization for logging performance
+		dbConn.Exec("PRAGMA journal_mode = WAL;")
+		dbConn.Exec("PRAGMA synchronous = NORMAL;")
+
+		// Initialize Schema
+		schema := `CREATE TABLE IF NOT EXISTS system_logs (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+			operation TEXT,
+			network TEXT,
+			service TEXT,
+			connection TEXT,
+			status INTEGER,
+			info TEXT,
+			caller_id TEXT,
+			call_chain TEXT
+		);`
+		_, err = dbConn.Exec(schema)
+	})
+	return dbConn, err
+}
+
+func logToSQLite(operation string, network string, service string, connection string, status int, info string, callerID string, callchain string) error {
+	db, err := getDB()
+	if err != nil {
+		return fmt.Errorf("db connection failed: %w", err)
+	}
+
+	query := `INSERT INTO system_logs (operation, network, service, connection, status, info, caller_id, call_chain) 
+	          VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+
+	_, err = db.Exec(query, operation, network, service, connection, status, info, callerID, callchain)
+	return err
+}
+
+func GetRecentLogs(limit int) {
+	// SELECT * FROM system_logs ORDER BY timestamp DESC LIMIT ?
 }
