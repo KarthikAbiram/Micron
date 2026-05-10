@@ -17,6 +17,9 @@ import (
 var (
 	dbConn *sql.DB
 	dbOnce sync.Once
+
+	// EnableSQLiteLogging is the feature flag. Default is false.
+	EnableSQLiteLogging = false
 )
 
 type ConnectionInfo struct {
@@ -95,7 +98,7 @@ func RegisterService(network, service, connectionString string, status int, info
 
 	// fmt.Println(serviceFilePath)
 	// Log the operation
-	//_ = logToSQLite("Register", network, service, connectionString, status, info, "system", "local-register")
+	_ = logToSQLite("Register", network, service, connectionString, status, info, "system", "local-register")
 
 	return nil
 }
@@ -110,6 +113,9 @@ func UnregisterService(network, service string) error {
 	err = os.Remove(serviceFilePath)
 
 	// fmt.Println(serviceFilePath)
+
+	// Log the operation
+	_ = logToSQLite("Unregister", network, service, "", 0, "", "system", "local-register")
 
 	return err
 }
@@ -138,7 +144,7 @@ func QueryService(network, service string) (ConnectionInfo, error) {
 func ListNetworkAndServices(network string) ([]ConnectionInfo, error) {
 
 	// Log the operation
-	//_ = logToSQLite("List", "", "", "", 0, "", "", "")
+	// _ = logToSQLite("List", "", "", "", 0, "", "", "")
 
 	var connections []ConnectionInfo
 	// Step 1: Get Micron Networks directory
@@ -223,7 +229,7 @@ func getDB() (*sql.DB, error) {
 		// Place the DB in the Micron root directory
 		appData, _ := os.UserConfigDir()
 		dbPath := filepath.Join(appData, "Micron", "logs.db")
-		print(dbPath)
+		// print(dbPath)
 
 		// Ensure directory exists
 		os.MkdirAll(filepath.Dir(dbPath), os.ModePerm)
@@ -256,6 +262,10 @@ func getDB() (*sql.DB, error) {
 }
 
 func logToSQLite(operation string, network string, service string, connection string, status int, info string, callerID string, callchain string) error {
+	if !EnableSQLiteLogging {
+		return nil // No-op if logging is disabled
+	}
+
 	db, err := getDB()
 	if err != nil {
 		return fmt.Errorf("db connection failed: %w", err)
@@ -268,6 +278,49 @@ func logToSQLite(operation string, network string, service string, connection st
 	return err
 }
 
-func GetRecentLogs(limit int) {
-	// SELECT * FROM system_logs ORDER BY timestamp DESC LIMIT ?
+type LogEntry struct {
+	ID         int    `json:"id"`
+	Timestamp  string `json:"timestamp"`
+	Operation  string `json:"operation"`
+	Network    string `json:"network"`
+	Service    string `json:"service"`
+	Connection string `json:"connection"`
+	Status     int    `json:"status"`
+	Info       string `json:"info"`
+	CallerID   string `json:"caller_id"`
+	CallChain  string `json:"call_chain"`
+}
+
+func GetLogs(limit int) ([]LogEntry, error) {
+	db, err := getDB()
+	if err != nil {
+		return nil, fmt.Errorf("db connection failed: %w", err)
+	}
+
+	query := `SELECT id, timestamp, operation, network, service, connection, status, info, caller_id, call_chain 
+	          FROM system_logs 
+	          ORDER BY timestamp DESC 
+	          LIMIT ?`
+
+	rows, err := db.Query(query, limit)
+	if err != nil {
+		return nil, fmt.Errorf("failed to query logs: %w", err)
+	}
+	defer rows.Close()
+
+	var logs []LogEntry
+	for rows.Next() {
+		var l LogEntry
+		err := rows.Scan(
+			&l.ID, &l.Timestamp, &l.Operation, &l.Network,
+			&l.Service, &l.Connection, &l.Status, &l.Info,
+			&l.CallerID, &l.CallChain,
+		)
+		if err != nil {
+			return nil, fmt.Errorf("failed to scan log row: %w", err)
+		}
+		logs = append(logs, l)
+	}
+
+	return logs, nil
 }

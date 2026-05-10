@@ -19,6 +19,7 @@ go run main.go
 go run main.go register --network mynetwork --service-id myservice --connection localhost:50051
 
 ## Build
+cd micronCLI/Source
 go build -o ..\..\Builds\MicronCLI\micronCLI.exe main.go
 
 # Usage
