@@ -98,7 +98,7 @@ func RegisterService(network, service, connectionString string, status int, info
 
 	// fmt.Println(serviceFilePath)
 	// Log the operation
-	_ = logToSQLite("Register", network, service, connectionString, status, info, "system", "local-register")
+	_ = logToSQLite("Register", network, service, connectionString, status, info, "", "")
 
 	return nil
 }
@@ -115,7 +115,7 @@ func UnregisterService(network, service string) error {
 	// fmt.Println(serviceFilePath)
 
 	// Log the operation
-	_ = logToSQLite("Unregister", network, service, "", 0, "", "system", "local-register")
+	_ = logToSQLite("Unregister", network, service, "", 0, "", "", "")
 
 	return err
 }
