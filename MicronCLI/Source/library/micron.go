@@ -19,7 +19,7 @@ var (
 	dbOnce sync.Once
 
 	// EnableSQLiteLogging is the feature flag. Default is false.
-	EnableSQLiteLogging = false
+	EnableSQLiteLogging = true
 )
 
 type ConnectionInfo struct {
@@ -297,7 +297,7 @@ func GetLogs(limit int) ([]LogEntry, error) {
 		return nil, fmt.Errorf("db connection failed: %w", err)
 	}
 
-	query := `SELECT id, timestamp, operation, network, service, connection, status, info, caller_id, call_chain 
+	query := `SELECT id, datetime(timestamp,'localtime') AS timestamp, operation, network, service, connection, status, info, caller_id, call_chain 
 	          FROM system_logs 
 	          ORDER BY timestamp DESC 
 	          LIMIT ?`
