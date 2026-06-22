@@ -324,3 +324,32 @@ func GetLogs(limit int) ([]LogEntry, error) {
 
 	return logs, nil
 }
+
+func PurgeLogs(keepRecent int) (int64, error) {
+	db, err := getDB()
+	if err != nil {
+		return 0, fmt.Errorf("db connection failed: %w", err)
+	}
+
+	// Subquery finds the IDs of the N most recent logs.
+	// The main query deletes everything else.
+	query := `DELETE FROM system_logs 
+	          WHERE id NOT IN (
+	              SELECT id FROM system_logs 
+	              ORDER BY timestamp DESC 
+	              LIMIT ?
+	          )`
+
+	res, err := db.Exec(query, keepRecent)
+	if err != nil {
+		return 0, fmt.Errorf("failed to purge old logs: %w", err)
+	}
+
+	rowsAffected, err := res.RowsAffected()
+	if err != nil {
+		// Even if rowsAffected fails, the deletion succeeded
+		return 0, nil
+	}
+
+	return rowsAffected, nil
+}
