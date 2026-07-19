@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var Version = "0.5.3"
+var Version = "0.5.4"
 
 // rootCmd represents the base command when called without any subcommands.
 var rootCmd = &cobra.Command{
@@ -40,6 +40,10 @@ Usage examples:
   Clear a network:
     micronCLI clear --network mynetwork
     micronCLI clear mynetwork
+
+  Find a free port:
+    micronCLI freeport
+    micronCLI freeport --prefer 50051
 `,
 	Version: Version,
 	CompletionOptions: cobra.CompletionOptions{

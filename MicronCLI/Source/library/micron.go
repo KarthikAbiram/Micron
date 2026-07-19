@@ -6,8 +6,10 @@ import (
 	"fmt"
 	"io/fs"
 	"microncli/library/grpcclient"
+	"net"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"sync"
 
@@ -220,6 +222,33 @@ func Clear(network string) error {
 
 	err = os.RemoveAll(networkDir)
 	return err
+}
+
+// FreePort takes a preferred port.
+// If prefer is 0, it dynamically finds and returns any free port.
+// If prefer is not 0, it checks if that specific port is free. If it is available, it returns it.
+// If it is occupied, it falls back to finding a random free port and returns that instead.
+func FreePort(prefer int) (int, error) {
+	if prefer != 0 {
+		// Test if the preferred port is available
+		address := net.JoinHostPort("127.0.0.1", strconv.Itoa(prefer))
+		l, err := net.Listen("tcp", address)
+		if err == nil {
+			l.Close()
+			return prefer, nil
+		}
+	}
+
+	// Fallback/Default: Ask the OS to assign a random, free port
+	l, err := net.Listen("tcp", "127.0.0.1:0")
+	if err != nil {
+		return 0, fmt.Errorf("failed to find any free ports: %w", err)
+	}
+	defer l.Close()
+
+	// Extract the port number assigned by the OS
+	addr := l.Addr().(*net.TCPAddr)
+	return addr.Port, nil
 }
 
 // getDB initializes the database connection once (thread-safe)
