@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-08-02 12:12:40" Creator="karthik.abiram" Comments="" ID="03bbc7b5d37462b24f9dc7252a788137">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2025-06-22 13:43:44" Modified_Date="2026-09-09 22:28:46" Creator="karthik.abiram" Comments="" ID="e6b2db4a81314572fa1d1697e0efe796">
   <Library_General_Settings>
     <Package_File_Name>Micron</Package_File_Name>
-    <Library_Version>0.5.4.3</Library_Version>
+    <Library_Version>0.5.4.4</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>Source</Library_Source_Folder>
     <Library_Output_Folder>..\Builds\LabVIEW</Library_Output_Folder>
@@ -18,8 +18,8 @@
   <Advanced_Settings>
     <Package_Dependencies>
       <Additional_External_Dependencies>labjson &gt;=0.1.0.3</Additional_External_Dependencies>
-      <Additional_External_Dependencies>ni_lib_labview_grpc_library &gt;=1.6.1.1</Additional_External_Dependencies>
-      <Additional_External_Dependencies>ni_lib_labview_grpc_servicer &gt;=1.6.1.1</Additional_External_Dependencies>
+      <Additional_External_Dependencies>ni_lib_labview_grpc_library &gt;=1.7.0.1</Additional_External_Dependencies>
+      <Additional_External_Dependencies>ni_lib_labview_grpc_servicer &gt;=1.7.0.1</Additional_External_Dependencies>
       <Additional_External_Dependencies>oglib_variantconfig &gt;=4.0.0.5</Additional_External_Dependencies>
       <Additional_External_Dependencies>soliton_technologies_lib_sll_toolkit &gt;=1.1.0.3</Additional_External_Dependencies>
       <Additional_External_Dependencies>wiresmith_technology_lib_g_cli &gt;=3.0.1.98</Additional_External_Dependencies>
@@ -281,7 +281,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\Tools\CreateMicron.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6A190683DD345DD77181EB439CD4076A</GUID>
+      <GUID>10F68D454236036001DC1A6FA31624AB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -414,7 +414,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\Base\Server\Service\Methods\GetServiceInfo.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>ACF357AA02F16C79771B926243B6C78F</GUID>
+      <GUID>97121D2C351EB285842D316CE7C81A46</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -519,7 +519,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\gRPC\Client\Helper\StartAsGRPC.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F1742A71008B93C9D62F76AC53F0AED6</GUID>
+      <GUID>A448C22DA3C0B696D2DE3E186F3C381C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -680,7 +680,7 @@ APIs available in &lt;b&gt; Functions Palette -&gt; Addons -&gt; Micron &lt;/b&g
         <Path>Source\vi.lib\Micron\MicronCLI\Methods\FreePort.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4849BD4D5694427FA0200C6C330CFC90</GUID>
+      <GUID>FE5C0353D77B9E317800A0E8EEE3F41E</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
