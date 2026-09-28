@@ -210,7 +210,8 @@ func MessageService(network, service, command, payload string) (string, error) {
 	}
 
 	// Step 4: Return the payload (or any other info)
-	return resp.GetPayload(), err
+	return resp.String(), err
+	// return resp.GetPayload(), err
 }
 
 // Clear/reset a network
