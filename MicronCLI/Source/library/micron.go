@@ -3,15 +3,18 @@ package library
 import (
 	"database/sql"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/fs"
 	"microncli/library/grpcclient"
 	"net"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strconv"
 	"strings"
 	"sync"
+	"time"
 
 	_ "modernc.org/sqlite"
 )
@@ -143,6 +146,172 @@ func QueryService(network, service string) (ConnectionInfo, error) {
 	return connection, nil
 }
 
+// Starts a service and waits for it to be registered
+func StartService(network, service, path string, timeout time.Duration) (ConnectionInfo, error) {
+	var connection ConnectionInfo = ConnectionInfo{}
+	var err error
+	// If network or service is empty, return an error
+	if network == "" || service == "" {
+		return connection, fmt.Errorf("network and service names cannot be empty")
+	}
+
+	// Check if the service is already registered and running
+	if connection, err = QueryService(network, service); err == nil {
+		if _, err := MessageService(network, service, "Ping", "MicronCLI", timeout); err == nil {
+			// fmt.Printf("Service '%s' is already running in network '%s'.\n", service, network)
+			return connection, nil
+		}
+	}
+
+	if err = UnregisterService(network, service); err != nil && !errors.Is(err, os.ErrNotExist) {
+		return connection, fmt.Errorf("failed to remove stale registration: %w", err)
+	}
+
+	if path == "" {
+		// Get the registered executable path for the service. If not found, generate error
+		path, err = getRegisteredExecutablePath(network, service)
+		if err != nil {
+			return connection, fmt.Errorf("failed to get registered executable path: %w", err)
+		}
+	}
+
+	// Start the service executable
+	process := exec.Command(path, "--network", network, "--service-id", service)
+	if err = process.Start(); err != nil {
+		return connection, fmt.Errorf("failed to start service executable: %w", err)
+	}
+
+	processExited := make(chan error, 1)
+	go func() {
+		processExited <- process.Wait()
+	}()
+
+	// Wait for the service to respond to a ping
+	ticker := time.NewTicker(time.Second)
+	defer ticker.Stop()
+
+	timer := time.NewTimer(timeout)
+	defer timer.Stop()
+
+	for {
+		if connection, err = QueryService(network, service); err == nil {
+			// fmt.Printf("Service '%s' started in network '%s'.\n", service, network)
+			return connection, nil
+		}
+
+		select {
+		case processErr := <-processExited:
+			if processErr == nil {
+				return connection, fmt.Errorf("service executable exited before responding to ping")
+			}
+			return connection, fmt.Errorf("service executable exited before responding to ping: %w", processErr)
+		case <-ticker.C:
+			//Check again
+		case <-timer.C:
+			return connection, fmt.Errorf("timed out waiting for service '%s' to start in network '%s'", service, network)
+		}
+	}
+
+	//return connection, nil
+}
+
+// Stop the service and wait for it to unregister itself
+func StopService(network, service string, timeout time.Duration) error {
+	var err error
+	// If network or service is empty, return an error
+	if network == "" || service == "" {
+		return fmt.Errorf("network and service names cannot be empty")
+	}
+
+	//Check if service is registered
+	if _, err = QueryService(network, service); err != nil {
+		return nil // Service is not registered, nothing to stop
+	}
+
+	//Send stop message to service
+	if _, err := MessageService(network, service, "Stop", "MicronCLI", timeout); err != nil {
+		return fmt.Errorf("failed to send stop message to service: %w", err)
+	}
+
+	//Wait for service to unregister itself. Periodically check by querying the service. If it is unregistered, return nil.
+	ticker := time.NewTicker(time.Second)
+	defer ticker.Stop()
+
+	timer := time.NewTimer(timeout)
+	defer timer.Stop()
+
+	for {
+		// Check whether the service has unregistered itself.
+		if _, err := QueryService(network, service); err != nil {
+			return nil
+		}
+
+		select {
+		case <-ticker.C:
+			// Check again.
+		case <-timer.C:
+			return fmt.Errorf(
+				"timed out waiting for service '%s' to unregister from network '%s'",
+				service,
+				network,
+			)
+		}
+	}
+}
+
+func getRegisteredExecutablePath(network, service string) (string, error) {
+	appDataDir, err := os.UserConfigDir()
+	if err != nil {
+		return "", fmt.Errorf("failed to locate AppData directory: %w", err)
+	}
+
+	registryPath := filepath.Join(appDataDir, "Micron", "Registry", network, service+".json")
+	data, err := os.ReadFile(registryPath)
+	if err != nil {
+		return "", fmt.Errorf("failed to read service registry file %q: %w", registryPath, err)
+	}
+
+	var registryData any
+	if err := json.Unmarshal(data, &registryData); err != nil {
+		return "", fmt.Errorf("failed to parse service registry file %q: %w", registryPath, err)
+	}
+
+	if executablePath := findExecutablePath(registryData); executablePath != "" {
+		return executablePath, nil
+	}
+	return "", fmt.Errorf("service registry file %q does not contain an executable path", registryPath)
+}
+
+func findExecutablePath(value any) string {
+	switch item := value.(type) {
+	case string:
+		path := strings.TrimSpace(item)
+		if strings.EqualFold(filepath.Ext(path), ".exe") {
+			return path
+		}
+	case []any:
+		for _, child := range item {
+			if path := findExecutablePath(child); path != "" {
+				return path
+			}
+		}
+	case map[string]any:
+		for key, child := range item {
+			if strings.Contains(strings.ToLower(key), "exe") || strings.Contains(strings.ToLower(key), "path") {
+				if path, ok := child.(string); ok && strings.EqualFold(filepath.Ext(strings.TrimSpace(path)), ".exe") {
+					return strings.TrimSpace(path)
+				}
+			}
+		}
+		for _, child := range item {
+			if path := findExecutablePath(child); path != "" {
+				return path
+			}
+		}
+	}
+	return ""
+}
+
 func ListNetworkAndServices(network string) ([]ConnectionInfo, error) {
 
 	// Log the operation
@@ -189,7 +358,12 @@ func ListNetworkAndServices(network string) ([]ConnectionInfo, error) {
 	return connections, err
 }
 
-func MessageService(network, service, command, payload string) (string, error) {
+func MessageService(network, service, command, payload string, timeout time.Duration) (string, error) {
+	//If network or service is empty, return an error
+	if network == "" || service == "" {
+		return "", fmt.Errorf("network and service names cannot be empty")
+	}
+
 	// Step 1: Get service connection info
 	connection, err := QueryService(network, service)
 	if err != nil {
@@ -204,7 +378,7 @@ func MessageService(network, service, command, payload string) (string, error) {
 	defer client.Close()
 
 	// Step 3: Send the message
-	resp, err := client.SendMessage(command, payload)
+	resp, err := client.SendMessage(command, payload, timeout)
 	if err != nil {
 		return "", err
 	}

@@ -30,8 +30,8 @@ func (c *Client) Close() error {
 	return c.conn.Close()
 }
 
-func (c *Client) SendMessage(command, payload string) (*MessageReply, error) {
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+func (c *Client) SendMessage(command, payload string, timeout time.Duration) (*MessageReply, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), timeout)
 	defer cancel()
 
 	req := &MessageRequest{
