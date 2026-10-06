@@ -10,41 +10,13 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var Version = "0.5.4"
+var Version = "0.5.5"
 
 // rootCmd represents the base command when called without any subcommands.
 var rootCmd = &cobra.Command{
-	Use:   "micronCLI",
-	Short: "A lightweight CLI to manage microservices",
-	Long: `MicronCLI allows registering, querying, clearing, and unregistering services.
-
-Usage examples:
-
-  Register a service:
-    micronCLI register --network mynetwork --service-id myservice --connection localhost:50051
-    micronCLI register mynetwork myservice localhost:50051
-
-  List available networks and services:
-	micronCLI list
-	micronCLI list --network mynetwork
-	micronCLI list mynetwork
-
-  Query a service:
-    micronCLI query --network mynetwork --service-id myservice
-    micronCLI query mynetwork myservice
-
-  Unregister a service:
-    micronCLI unregister --network mynetwork --service-id myservice
-    micronCLI unregister mynetwork myservice
-
-  Clear a network:
-    micronCLI clear --network mynetwork
-    micronCLI clear mynetwork
-
-  Find a free port:
-    micronCLI freeport
-    micronCLI freeport --prefer 50051
-`,
+	Use:     "micronCLI",
+	Short:   "A lightweight CLI to manage microservices",
+	Long:    "MicronCLI allows managing microservices with starting, stopping, messaging and querying microservices within a user defined virtual network and helps avoid port conflicts.",
 	Version: Version,
 	CompletionOptions: cobra.CompletionOptions{
 		HiddenDefaultCmd: true, // hides cmd
