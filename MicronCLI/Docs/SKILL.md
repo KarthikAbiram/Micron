@@ -1,8 +1,8 @@
-# MicronCLI skill
+# MicronCLI Skill
 
 Use this skill when working with the Micron CLI tool for registering, listing, querying, starting, stopping, messaging, clearing, unregistering, and managing services in a network.
 
-## Quick reference
+## Quick Reference
 
 Prefer flags for every argument supported by the command. The command implementation also accepts positional arguments as fallbacks, but flag-based syntax is the preferred form.
 
@@ -20,9 +20,9 @@ microncli help
 microncli version
 ```
 
-## Commands and flag-based syntax
+## Commands
 
-### List
+### List Services
 Lists active networks and services.
 
 ```powershell
@@ -30,7 +30,7 @@ microncli list
 microncli list --network mynetwork
 ```
 
-### Start a service
+### Start Service
 Starts a service instance from the specified path and registers it under the user provided network.
 
 ```powershell
@@ -46,7 +46,7 @@ The service instance is expected to register itself with the network after start
 
 The command prints the connection string returned by the service startup operation.
 
-### Message a service
+### Message Service
 Send a message to a service instance through the commandline.
 
 ```powershell
@@ -67,14 +67,14 @@ For `cmd.exe`, escape the JSON quotes when the payload is supplied through a quo
 microncli message --network default --service-id app3service --command Add --payload "{\"Numeric1\":10,\"Numeric2\":20}"
 ```
 
-### Query a service
+### Query Service
 The query returns the registered service connection string and reports a nonzero service status as an error.
 
 ```powershell
 microncli query --network mynetwork --service-id myservice
 ```
 
-### Stop a service
+### Stop Service
 Send a stop message to the service and waits for it to unregister itself.
 
 ```powershell
@@ -85,7 +85,7 @@ microncli stop --network mynetwork --service-id myservice --timeout 30
 - `--service-id`: service identifier
 - `--timeout`: timeout in seconds; defaults to `30`
 
-### Register a service
+### Register Service
 When a microservice starts, it should register itself with micronCLI specifying its connection string. If there are any errors during the microservice startup, it can report a nonzero status code and optional additional information.
 ```powershell
 microncli register --network mynetwork --service-id myservice --connection localhost:50051 --status 0 --info "Sample Info"
@@ -98,19 +98,19 @@ microncli register --network mynetwork --service-id myservice --connection local
 - `--info`: optional additional information
 
 
-### Unregister a service
+### Unregister Service
 When a microservice instance stops, it should unregister itself from micronCLI. 
 ```powershell
 microncli unregister --network mynetwork --service-id myservice
 ```
 
-### Clear a network
+### Clear Network
 Clears all the available services in the specified network. This is useful for cleaning up a network before starting a new set of services.
 ```powershell
 microncli clear --network mynetwork
 ```
 
-### Find a free port
+### Find Free Port
 A helpful tool to check if a preferred port is available or to find a free port for a service to use. The command returns the port number that is available for use.
 ```powershell
 microncli freeport --prefer 50051
@@ -118,7 +118,7 @@ microncli freeport --prefer 50051
 
 - `--prefer`: preferred TCP port number; defaults to `0`, which requests any available port
 
-### List recent logs
+### List Recent Logs
 Lists the recent N log entries from the MicronCLI related to registration and unregistration of services along with timestamp for debugging.
 ```powershell
 microncli logs --limit 100
@@ -126,7 +126,7 @@ microncli logs --limit 100
 
 - `--limit`: number of log entries to return; defaults to `100`
 
-### Purge old logs
+### Purge Old Logs
 Deletes old log entries from the MicronCLI log file, retaining only the most recent N entries.
 ```powershell
 microncli purge --keep 1000
@@ -135,7 +135,7 @@ microncli purge --keep 1000
 - `--keep`: number of recent log entries to retain; defaults to `1000`
 - Negative values are rejected
 
-## Positional argument compatibility
+## Positional Argument Compatibility
 
 The source still accepts positional arguments for commands but the flag-based syntax is preferred for clarity and maintainability.
 
@@ -155,7 +155,7 @@ microncli purge 1000
 
 Prefer the flag forms above because they are clearer and remain aligned with the command definitions.
 
-## JSON rules
+## JSON Rules
 
 When sending a JSON payload:
 
