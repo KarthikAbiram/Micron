@@ -38,7 +38,8 @@ OutputDir=..\..\Builds\MicronCLI\Installer
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "..\..\Builds\MicronCLI\micronCLI.exe"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: "..\..\Builds\MicronCLI\EXE\bin\*"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: "..\..\Builds\MicronCLI\EXE\skills\microncli\*"; DestDir: "{app}\skills\microncli"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Code]
