@@ -8,16 +8,18 @@ import (
 	"microncli/library"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc/status"
 )
 
 var (
-	msgNetwork string
-	msgService string
-	msgCommand string
-	msgPayload string
+	msgNetwork   string
+	msgService   string
+	msgCommand   string
+	msgPayload   string
+	msgTimeout_s int
 )
 
 var messageCmd = &cobra.Command{
@@ -40,6 +42,7 @@ Positional style:
 		service := strings.ToLower(msgService)
 		command := msgCommand
 		payload := msgPayload
+		timeout := time.Duration(msgTimeout_s) * time.Second
 
 		// Fallback to positional args if needed
 		if network == "" && len(args) > 0 {
@@ -56,7 +59,7 @@ Positional style:
 		}
 
 		// List available network and services
-		response, err := library.MessageService(network, service, command, payload)
+		response, err := library.MessageService(network, service, command, payload, timeout)
 		fmt.Println(response)
 		if err != nil {
 			st, ok := status.FromError(err)
@@ -78,6 +81,7 @@ func init() {
 	messageCmd.Flags().StringVar(&msgService, "service-id", "", "Service ID")
 	messageCmd.Flags().StringVar(&msgCommand, "command", "", "Command name")
 	messageCmd.Flags().StringVar(&msgPayload, "payload", "", "Payload")
+	messageCmd.Flags().IntVar(&msgTimeout_s, "timeout", 30, "Timeout in seconds for the message response")
 
 	//Ignore unknown flags
 	registerCmd.FParseErrWhitelist.UnknownFlags = true

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "MicronCLI"
-#define MyAppVersion "0.5.4"
+#define MyAppVersion "0.5.4.4"
 #define MyAppPublisher "Karthik Abiram"
 #define MyAppURL "https://github.com/KarthikAbiram/Micron"
 #include "environment.iss"
@@ -38,7 +38,8 @@ OutputDir=..\..\Builds\MicronCLI\Installer
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "..\..\Builds\MicronCLI\micronCLI.exe"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: "..\..\Builds\MicronCLI\EXE\bin\*"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: "..\..\Builds\MicronCLI\EXE\skills\microncli\*"; DestDir: "{app}\skills\microncli"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Code]
