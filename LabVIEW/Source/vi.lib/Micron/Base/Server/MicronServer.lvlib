@@ -9,7 +9,7 @@
 
 </Property>
 	<Item Name="APIs" Type="Folder">
-		<Item Name="Process.vi" Type="VI" URL="../APIs/Process.vi"/>
+		<Item Name="AutoMapClass.vi" Type="VI" URL="../APIs/AutoMapClass.vi"/>
 	</Item>
 	<Item Name="SubVIs" Type="Folder">
 		<Item Name="LookupMethod.vi" Type="VI" URL="../SubVIs/LookupMethod.vi"/>
