@@ -14,6 +14,9 @@
 	<Item Name="SubVIs" Type="Folder">
 		<Item Name="LookupMethod.vi" Type="VI" URL="../SubVIs/LookupMethod.vi"/>
 	</Item>
+	<Item Name="Typedefs" Type="Folder">
+		<Item Name="VIMatchType.ctl" Type="VI" URL="../Typedefs/VIMatchType.ctl"/>
+	</Item>
 	<Item Name="ServiceBase.lvclass" Type="LVClass" URL="../Service/ServiceBase.lvclass"/>
 	<Item Name="MessageBase.lvclass" Type="LVClass" URL="../Message/MessageBase.lvclass"/>
 </Library>
