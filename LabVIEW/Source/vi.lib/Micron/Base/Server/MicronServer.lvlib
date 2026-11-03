@@ -11,6 +11,9 @@
 	<Item Name="APIs" Type="Folder">
 		<Item Name="Process.vi" Type="VI" URL="../APIs/Process.vi"/>
 	</Item>
+	<Item Name="SubVIs" Type="Folder">
+		<Item Name="LookupMethod.vi" Type="VI" URL="../SubVIs/LookupMethod.vi"/>
+	</Item>
 	<Item Name="ServiceBase.lvclass" Type="LVClass" URL="../Service/ServiceBase.lvclass"/>
 	<Item Name="MessageBase.lvclass" Type="LVClass" URL="../Message/MessageBase.lvclass"/>
 </Library>
